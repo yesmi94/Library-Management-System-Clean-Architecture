@@ -1,0 +1,17 @@
+{
+  "version": 2,
+  "dgSpecHash": "oLKyGluxdfY=",
+  "success": true,
+  "projectFilePath": "C:\\Users\\YesmiLiyanage\\Desktop\\LibraryManagementCleanArchitecture\\API\\LibraryManagementCleanArchitecture.API\\LibraryManagementCleanArchitecture.API.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\YesmiLiyanage\\.nuget\\packages\\automapper\\14.0.0\\automapper.14.0.0.nupkg.sha512",
+    "C:\\Users\\YesmiLiyanage\\.nuget\\packages\\mediatr\\12.5.0\\mediatr.12.5.0.nupkg.sha512",
+    "C:\\Users\\YesmiLiyanage\\.nuget\\packages\\mediatr.contracts\\2.0.1\\mediatr.contracts.2.0.1.nupkg.sha512",
+    "C:\\Users\\YesmiLiyanage\\.nuget\\packages\\microsoft.aspnetcore.openapi\\9.0.6\\microsoft.aspnetcore.openapi.9.0.6.nupkg.sha512",
+    "C:\\Users\\YesmiLiyanage\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\8.0.0\\microsoft.extensions.dependencyinjection.abstractions.8.0.0.nupkg.sha512",
+    "C:\\Users\\YesmiLiyanage\\.nuget\\packages\\microsoft.extensions.options\\8.0.0\\microsoft.extensions.options.8.0.0.nupkg.sha512",
+    "C:\\Users\\YesmiLiyanage\\.nuget\\packages\\microsoft.extensions.primitives\\8.0.0\\microsoft.extensions.primitives.8.0.0.nupkg.sha512",
+    "C:\\Users\\YesmiLiyanage\\.nuget\\packages\\microsoft.openapi\\1.6.17\\microsoft.openapi.1.6.17.nupkg.sha512"
+  ],
+  "logs": []
+}
