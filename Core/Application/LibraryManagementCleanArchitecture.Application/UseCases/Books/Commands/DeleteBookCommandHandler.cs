@@ -9,10 +9,12 @@ namespace LibraryManagementCleanArchitecture.Application.UseCases.Books.Commands
     {
 
         private readonly IRepository<Book> bookRepository;
+        private readonly IUnitOfWork unitOfWork;
 
-        public DeleteBookCommandHandler(IRepository<Book> bookRepository)
+        public DeleteBookCommandHandler(IRepository<Book> bookRepository, IUnitOfWork unitOfWork)
         {
             this.bookRepository = bookRepository;
+            this.unitOfWork = unitOfWork;
         }
 
         public async Task<string> Handle(DeleteBookCommand request, CancellationToken cancellationToken)
@@ -23,6 +25,7 @@ namespace LibraryManagementCleanArchitecture.Application.UseCases.Books.Commands
                 throw new BookNotFoundException("This book does not exist");
 
             await bookRepository.DeleteAsync(book);
+            await unitOfWork.CompleteAsync();
 
             return book.Id;
         }

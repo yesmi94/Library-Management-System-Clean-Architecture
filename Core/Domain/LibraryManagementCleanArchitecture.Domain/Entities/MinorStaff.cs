@@ -1,4 +1,4 @@
-﻿using static LibraryManagementSystemEFCore.Domain.Enums.Enums;
+﻿using static LibraryManagementCleanArchitecture.Domain.Enums.Enums;
 
 namespace LibraryManagementCleanArchitecture.Domain.Entities
 {

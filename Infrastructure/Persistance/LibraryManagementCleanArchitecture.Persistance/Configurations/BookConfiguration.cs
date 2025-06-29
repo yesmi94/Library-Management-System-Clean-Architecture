@@ -1,4 +1,4 @@
-﻿using LibraryManagementSystemEFCore.Domain.Entities;
+﻿using LibraryManagementCleanArchitecture.Domain.Entities;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 

@@ -3,20 +3,67 @@
   "WorkspaceRootPath": "C:\\Users\\YesmiLiyanage\\Desktop\\LibraryManagementCleanArchitecture\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{368C675E-7F0D-45A8-9B11-057D973DF33A}|Core\\Application\\LibraryManagementCleanArchitecture.Application\\LibraryManagementCleanArchitecture.Application.csproj|c:\\users\\yesmiliyanage\\desktop\\librarymanagementcleanarchitecture\\core\\application\\librarymanagementcleanarchitecture.application\\usecases\\books\\commands\\createbookcommadhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{368C675E-7F0D-45A8-9B11-057D973DF33A}|Core\\Application\\LibraryManagementCleanArchitecture.Application\\LibraryManagementCleanArchitecture.Application.csproj|solutionrelative:core\\application\\librarymanagementcleanarchitecture.application\\usecases\\books\\commands\\createbookcommadhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{368C675E-7F0D-45A8-9B11-057D973DF33A}|Core\\Application\\LibraryManagementCleanArchitecture.Application\\LibraryManagementCleanArchitecture.Application.csproj|c:\\users\\yesmiliyanage\\desktop\\librarymanagementcleanarchitecture\\core\\application\\librarymanagementcleanarchitecture.application\\usecases\\library\\commands\\returnbookcommandhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{368C675E-7F0D-45A8-9B11-057D973DF33A}|Core\\Application\\LibraryManagementCleanArchitecture.Application\\LibraryManagementCleanArchitecture.Application.csproj|solutionrelative:core\\application\\librarymanagementcleanarchitecture.application\\usecases\\library\\commands\\returnbookcommandhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{368C675E-7F0D-45A8-9B11-057D973DF33A}|Core\\Application\\LibraryManagementCleanArchitecture.Application\\LibraryManagementCleanArchitecture.Application.csproj|c:\\users\\yesmiliyanage\\desktop\\librarymanagementcleanarchitecture\\core\\application\\librarymanagementcleanarchitecture.application\\exceptions\\booknotfoundexception.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{368C675E-7F0D-45A8-9B11-057D973DF33A}|Core\\Application\\LibraryManagementCleanArchitecture.Application\\LibraryManagementCleanArchitecture.Application.csproj|solutionrelative:core\\application\\librarymanagementcleanarchitecture.application\\exceptions\\booknotfoundexception.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{368C675E-7F0D-45A8-9B11-057D973DF33A}|Core\\Application\\LibraryManagementCleanArchitecture.Application\\LibraryManagementCleanArchitecture.Application.csproj|c:\\users\\yesmiliyanage\\desktop\\librarymanagementcleanarchitecture\\core\\application\\librarymanagementcleanarchitecture.application\\usecases\\library\\commands\\borrowbookcommandhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{368C675E-7F0D-45A8-9B11-057D973DF33A}|Core\\Application\\LibraryManagementCleanArchitecture.Application\\LibraryManagementCleanArchitecture.Application.csproj|solutionrelative:core\\application\\librarymanagementcleanarchitecture.application\\usecases\\library\\commands\\borrowbookcommandhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{368C675E-7F0D-45A8-9B11-057D973DF33A}|Core\\Application\\LibraryManagementCleanArchitecture.Application\\LibraryManagementCleanArchitecture.Application.csproj|c:\\users\\yesmiliyanage\\desktop\\librarymanagementcleanarchitecture\\core\\application\\librarymanagementcleanarchitecture.application\\mapping\\bookmappingprofile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{368C675E-7F0D-45A8-9B11-057D973DF33A}|Core\\Application\\LibraryManagementCleanArchitecture.Application\\LibraryManagementCleanArchitecture.Application.csproj|solutionrelative:core\\application\\librarymanagementcleanarchitecture.application\\mapping\\bookmappingprofile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{368C675E-7F0D-45A8-9B11-057D973DF33A}|Core\\Application\\LibraryManagementCleanArchitecture.Application\\LibraryManagementCleanArchitecture.Application.csproj|c:\\users\\yesmiliyanage\\desktop\\librarymanagementcleanarchitecture\\core\\application\\librarymanagementcleanarchitecture.application\\dto\\bookdto\\addbookdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{368C675E-7F0D-45A8-9B11-057D973DF33A}|Core\\Application\\LibraryManagementCleanArchitecture.Application\\LibraryManagementCleanArchitecture.Application.csproj|solutionrelative:core\\application\\librarymanagementcleanarchitecture.application\\dto\\bookdto\\addbookdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{368C675E-7F0D-45A8-9B11-057D973DF33A}|Core\\Application\\LibraryManagementCleanArchitecture.Application\\LibraryManagementCleanArchitecture.Application.csproj|c:\\users\\yesmiliyanage\\desktop\\librarymanagementcleanarchitecture\\core\\application\\librarymanagementcleanarchitecture.application\\dto\\bookdto\\bookdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{368C675E-7F0D-45A8-9B11-057D973DF33A}|Core\\Application\\LibraryManagementCleanArchitecture.Application\\LibraryManagementCleanArchitecture.Application.csproj|solutionrelative:core\\application\\librarymanagementcleanarchitecture.application\\dto\\bookdto\\bookdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FD9BF01C-86D6-4838-B92B-CEC22FF88929}|Core\\Domain\\LibraryManagementCleanArchitecture.Domain\\LibraryManagementCleanArchitecture.Domain.csproj|c:\\users\\yesmiliyanage\\desktop\\librarymanagementcleanarchitecture\\core\\domain\\librarymanagementcleanarchitecture.domain\\entities\\person.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FD9BF01C-86D6-4838-B92B-CEC22FF88929}|Core\\Domain\\LibraryManagementCleanArchitecture.Domain\\LibraryManagementCleanArchitecture.Domain.csproj|solutionrelative:core\\domain\\librarymanagementcleanarchitecture.domain\\entities\\person.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{368C675E-7F0D-45A8-9B11-057D973DF33A}|Core\\Application\\LibraryManagementCleanArchitecture.Application\\LibraryManagementCleanArchitecture.Application.csproj|c:\\users\\yesmiliyanage\\desktop\\librarymanagementcleanarchitecture\\core\\application\\librarymanagementcleanarchitecture.application\\dto\\persondto\\persondto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{368C675E-7F0D-45A8-9B11-057D973DF33A}|Core\\Application\\LibraryManagementCleanArchitecture.Application\\LibraryManagementCleanArchitecture.Application.csproj|solutionrelative:core\\application\\librarymanagementcleanarchitecture.application\\dto\\persondto\\persondto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{368C675E-7F0D-45A8-9B11-057D973DF33A}|Core\\Application\\LibraryManagementCleanArchitecture.Application\\LibraryManagementCleanArchitecture.Application.csproj|c:\\users\\yesmiliyanage\\desktop\\librarymanagementcleanarchitecture\\core\\application\\librarymanagementcleanarchitecture.application\\dto\\persondto\\addpersondto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{368C675E-7F0D-45A8-9B11-057D973DF33A}|Core\\Application\\LibraryManagementCleanArchitecture.Application\\LibraryManagementCleanArchitecture.Application.csproj|solutionrelative:core\\application\\librarymanagementcleanarchitecture.application\\dto\\persondto\\addpersondto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{368C675E-7F0D-45A8-9B11-057D973DF33A}|Core\\Application\\LibraryManagementCleanArchitecture.Application\\LibraryManagementCleanArchitecture.Application.csproj|c:\\users\\yesmiliyanage\\desktop\\librarymanagementcleanarchitecture\\core\\application\\librarymanagementcleanarchitecture.application\\mapping\\personmappingprofile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{368C675E-7F0D-45A8-9B11-057D973DF33A}|Core\\Application\\LibraryManagementCleanArchitecture.Application\\LibraryManagementCleanArchitecture.Application.csproj|solutionrelative:core\\application\\librarymanagementcleanarchitecture.application\\mapping\\personmappingprofile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{22A3584F-1F14-4A22-AA98-3D3792F6B024}|Infrastructure\\Persistance\\LibraryManagementCleanArchitecture.Persistance\\LibraryManagementCleanArchitecture.Persistance.csproj|c:\\users\\yesmiliyanage\\desktop\\librarymanagementcleanarchitecture\\infrastructure\\persistance\\librarymanagementcleanarchitecture.persistance\\unitofwork.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{22A3584F-1F14-4A22-AA98-3D3792F6B024}|Infrastructure\\Persistance\\LibraryManagementCleanArchitecture.Persistance\\LibraryManagementCleanArchitecture.Persistance.csproj|solutionrelative:infrastructure\\persistance\\librarymanagementcleanarchitecture.persistance\\unitofwork.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{22A3584F-1F14-4A22-AA98-3D3792F6B024}|Infrastructure\\Persistance\\LibraryManagementCleanArchitecture.Persistance\\LibraryManagementCleanArchitecture.Persistance.csproj|c:\\users\\yesmiliyanage\\desktop\\librarymanagementcleanarchitecture\\infrastructure\\persistance\\librarymanagementcleanarchitecture.persistance\\repository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{22A3584F-1F14-4A22-AA98-3D3792F6B024}|Infrastructure\\Persistance\\LibraryManagementCleanArchitecture.Persistance\\LibraryManagementCleanArchitecture.Persistance.csproj|solutionrelative:infrastructure\\persistance\\librarymanagementcleanarchitecture.persistance\\repository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{368C675E-7F0D-45A8-9B11-057D973DF33A}|Core\\Application\\LibraryManagementCleanArchitecture.Application\\LibraryManagementCleanArchitecture.Application.csproj|c:\\users\\yesmiliyanage\\desktop\\librarymanagementcleanarchitecture\\core\\application\\librarymanagementcleanarchitecture.application\\usecases\\books\\commands\\deletebookcommandhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{368C675E-7F0D-45A8-9B11-057D973DF33A}|Core\\Application\\LibraryManagementCleanArchitecture.Application\\LibraryManagementCleanArchitecture.Application.csproj|solutionrelative:core\\application\\librarymanagementcleanarchitecture.application\\usecases\\books\\commands\\deletebookcommandhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{368C675E-7F0D-45A8-9B11-057D973DF33A}|Core\\Application\\LibraryManagementCleanArchitecture.Application\\LibraryManagementCleanArchitecture.Application.csproj|c:\\users\\yesmiliyanage\\desktop\\librarymanagementcleanarchitecture\\core\\application\\librarymanagementcleanarchitecture.application\\interfaces\\irepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{368C675E-7F0D-45A8-9B11-057D973DF33A}|Core\\Application\\LibraryManagementCleanArchitecture.Application\\LibraryManagementCleanArchitecture.Application.csproj|solutionrelative:core\\application\\librarymanagementcleanarchitecture.application\\interfaces\\irepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{22A3584F-1F14-4A22-AA98-3D3792F6B024}|Infrastructure\\Persistance\\LibraryManagementCleanArchitecture.Persistance\\LibraryManagementCleanArchitecture.Persistance.csproj|c:\\users\\yesmiliyanage\\desktop\\librarymanagementcleanarchitecture\\infrastructure\\persistance\\librarymanagementcleanarchitecture.persistance\\datacontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{22A3584F-1F14-4A22-AA98-3D3792F6B024}|Infrastructure\\Persistance\\LibraryManagementCleanArchitecture.Persistance\\LibraryManagementCleanArchitecture.Persistance.csproj|solutionrelative:infrastructure\\persistance\\librarymanagementcleanarchitecture.persistance\\datacontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|ViewDataWindow_MSSQL__/YESMIL_LT_SQLEXPRESS/LibraryDatabase/True/SqlTable/dbo.People.sql||{0058A1F7-65F3-4DB9-B3D0-CA7E64DD73CD}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0D1C8537-DD83-4E31-A143-4EBC1ABA7064}|API\\LibraryManagementCleanArchitecture.API\\LibraryManagementCleanArchitecture.API.csproj|c:\\users\\yesmiliyanage\\desktop\\librarymanagementcleanarchitecture\\api\\librarymanagementcleanarchitecture.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0D1C8537-DD83-4E31-A143-4EBC1ABA7064}|API\\LibraryManagementCleanArchitecture.API\\LibraryManagementCleanArchitecture.API.csproj|solutionrelative:api\\librarymanagementcleanarchitecture.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{368C675E-7F0D-45A8-9B11-057D973DF33A}|Core\\Application\\LibraryManagementCleanArchitecture.Application\\LibraryManagementCleanArchitecture.Application.csproj|c:\\users\\yesmiliyanage\\desktop\\librarymanagementcleanarchitecture\\core\\application\\librarymanagementcleanarchitecture.application\\assemblyreference.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{368C675E-7F0D-45A8-9B11-057D973DF33A}|Core\\Application\\LibraryManagementCleanArchitecture.Application\\LibraryManagementCleanArchitecture.Application.csproj|solutionrelative:core\\application\\librarymanagementcleanarchitecture.application\\assemblyreference.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{368C675E-7F0D-45A8-9B11-057D973DF33A}|Core\\Application\\LibraryManagementCleanArchitecture.Application\\LibraryManagementCleanArchitecture.Application.csproj|c:\\users\\yesmiliyanage\\desktop\\librarymanagementcleanarchitecture\\core\\application\\librarymanagementcleanarchitecture.application\\usecases\\persons\\queries\\getpersonsqueryhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -31,56 +78,24 @@
       "RelativeMoniker": "D:0:0:{368C675E-7F0D-45A8-9B11-057D973DF33A}|Core\\Application\\LibraryManagementCleanArchitecture.Application\\LibraryManagementCleanArchitecture.Application.csproj|solutionrelative:core\\application\\librarymanagementcleanarchitecture.application\\usecases\\books\\queries\\getbooksqueryhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{368C675E-7F0D-45A8-9B11-057D973DF33A}|Core\\Application\\LibraryManagementCleanArchitecture.Application\\LibraryManagementCleanArchitecture.Application.csproj|c:\\users\\yesmiliyanage\\desktop\\librarymanagementcleanarchitecture\\core\\application\\librarymanagementcleanarchitecture.application\\usecases\\books\\queries\\getbooksquery.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{368C675E-7F0D-45A8-9B11-057D973DF33A}|Core\\Application\\LibraryManagementCleanArchitecture.Application\\LibraryManagementCleanArchitecture.Application.csproj|solutionrelative:core\\application\\librarymanagementcleanarchitecture.application\\usecases\\books\\queries\\getbooksquery.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{368C675E-7F0D-45A8-9B11-057D973DF33A}|Core\\Application\\LibraryManagementCleanArchitecture.Application\\LibraryManagementCleanArchitecture.Application.csproj|c:\\users\\yesmiliyanage\\desktop\\librarymanagementcleanarchitecture\\core\\application\\librarymanagementcleanarchitecture.application\\usecases\\persons\\queries\\getmembersqueryhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{368C675E-7F0D-45A8-9B11-057D973DF33A}|Core\\Application\\LibraryManagementCleanArchitecture.Application\\LibraryManagementCleanArchitecture.Application.csproj|solutionrelative:core\\application\\librarymanagementcleanarchitecture.application\\usecases\\persons\\queries\\getmembersqueryhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{368C675E-7F0D-45A8-9B11-057D973DF33A}|Core\\Application\\LibraryManagementCleanArchitecture.Application\\LibraryManagementCleanArchitecture.Application.csproj|c:\\users\\yesmiliyanage\\desktop\\librarymanagementcleanarchitecture\\core\\application\\librarymanagementcleanarchitecture.application\\usecases\\library\\commands\\returnbookcommandhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{368C675E-7F0D-45A8-9B11-057D973DF33A}|Core\\Application\\LibraryManagementCleanArchitecture.Application\\LibraryManagementCleanArchitecture.Application.csproj|solutionrelative:core\\application\\librarymanagementcleanarchitecture.application\\usecases\\library\\commands\\returnbookcommandhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{368C675E-7F0D-45A8-9B11-057D973DF33A}|Core\\Application\\LibraryManagementCleanArchitecture.Application\\LibraryManagementCleanArchitecture.Application.csproj|c:\\users\\yesmiliyanage\\desktop\\librarymanagementcleanarchitecture\\core\\application\\librarymanagementcleanarchitecture.application\\usecases\\persons\\queries\\getmembersquery.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{368C675E-7F0D-45A8-9B11-057D973DF33A}|Core\\Application\\LibraryManagementCleanArchitecture.Application\\LibraryManagementCleanArchitecture.Application.csproj|solutionrelative:core\\application\\librarymanagementcleanarchitecture.application\\usecases\\persons\\queries\\getmembersquery.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{368C675E-7F0D-45A8-9B11-057D973DF33A}|Core\\Application\\LibraryManagementCleanArchitecture.Application\\LibraryManagementCleanArchitecture.Application.csproj|c:\\users\\yesmiliyanage\\desktop\\librarymanagementcleanarchitecture\\core\\application\\librarymanagementcleanarchitecture.application\\dto\\persondto\\persondto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{368C675E-7F0D-45A8-9B11-057D973DF33A}|Core\\Application\\LibraryManagementCleanArchitecture.Application\\LibraryManagementCleanArchitecture.Application.csproj|solutionrelative:core\\application\\librarymanagementcleanarchitecture.application\\dto\\persondto\\persondto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{22A3584F-1F14-4A22-AA98-3D3792F6B024}|Infrastructure\\Persistance\\LibraryManagementCleanArchitecture.Persistance\\LibraryManagementCleanArchitecture.Persistance.csproj|c:\\users\\yesmiliyanage\\desktop\\librarymanagementcleanarchitecture\\infrastructure\\persistance\\librarymanagementcleanarchitecture.persistance\\configurations\\personconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{22A3584F-1F14-4A22-AA98-3D3792F6B024}|Infrastructure\\Persistance\\LibraryManagementCleanArchitecture.Persistance\\LibraryManagementCleanArchitecture.Persistance.csproj|solutionrelative:infrastructure\\persistance\\librarymanagementcleanarchitecture.persistance\\configurations\\personconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{368C675E-7F0D-45A8-9B11-057D973DF33A}|Core\\Application\\LibraryManagementCleanArchitecture.Application\\LibraryManagementCleanArchitecture.Application.csproj|c:\\users\\yesmiliyanage\\desktop\\librarymanagementcleanarchitecture\\core\\application\\librarymanagementcleanarchitecture.application\\dto\\persondto\\addpersondto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{368C675E-7F0D-45A8-9B11-057D973DF33A}|Core\\Application\\LibraryManagementCleanArchitecture.Application\\LibraryManagementCleanArchitecture.Application.csproj|solutionrelative:core\\application\\librarymanagementcleanarchitecture.application\\dto\\persondto\\addpersondto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{FD9BF01C-86D6-4838-B92B-CEC22FF88929}|Core\\Domain\\LibraryManagementCleanArchitecture.Domain\\LibraryManagementCleanArchitecture.Domain.csproj|c:\\users\\yesmiliyanage\\desktop\\librarymanagementcleanarchitecture\\core\\domain\\librarymanagementcleanarchitecture.domain\\enums\\enums.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FD9BF01C-86D6-4838-B92B-CEC22FF88929}|Core\\Domain\\LibraryManagementCleanArchitecture.Domain\\LibraryManagementCleanArchitecture.Domain.csproj|solutionrelative:core\\domain\\librarymanagementcleanarchitecture.domain\\enums\\enums.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{368C675E-7F0D-45A8-9B11-057D973DF33A}|Core\\Application\\LibraryManagementCleanArchitecture.Application\\LibraryManagementCleanArchitecture.Application.csproj|c:\\users\\yesmiliyanage\\desktop\\librarymanagementcleanarchitecture\\core\\application\\librarymanagementcleanarchitecture.application\\usecases\\library\\commands\\borrowbookcommandhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{368C675E-7F0D-45A8-9B11-057D973DF33A}|Core\\Application\\LibraryManagementCleanArchitecture.Application\\LibraryManagementCleanArchitecture.Application.csproj|solutionrelative:core\\application\\librarymanagementcleanarchitecture.application\\usecases\\library\\commands\\borrowbookcommandhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{368C675E-7F0D-45A8-9B11-057D973DF33A}|Core\\Application\\LibraryManagementCleanArchitecture.Application\\LibraryManagementCleanArchitecture.Application.csproj|c:\\users\\yesmiliyanage\\desktop\\librarymanagementcleanarchitecture\\core\\application\\librarymanagementcleanarchitecture.application\\usecases\\library\\commands\\borrowbookcommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{368C675E-7F0D-45A8-9B11-057D973DF33A}|Core\\Application\\LibraryManagementCleanArchitecture.Application\\LibraryManagementCleanArchitecture.Application.csproj|solutionrelative:core\\application\\librarymanagementcleanarchitecture.application\\usecases\\library\\commands\\borrowbookcommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{368C675E-7F0D-45A8-9B11-057D973DF33A}|Core\\Application\\LibraryManagementCleanArchitecture.Application\\LibraryManagementCleanArchitecture.Application.csproj|c:\\users\\yesmiliyanage\\desktop\\librarymanagementcleanarchitecture\\core\\application\\librarymanagementcleanarchitecture.application\\usecases\\books\\commands\\deletebookcommandhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{368C675E-7F0D-45A8-9B11-057D973DF33A}|Core\\Application\\LibraryManagementCleanArchitecture.Application\\LibraryManagementCleanArchitecture.Application.csproj|solutionrelative:core\\application\\librarymanagementcleanarchitecture.application\\usecases\\books\\commands\\deletebookcommandhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{368C675E-7F0D-45A8-9B11-057D973DF33A}|Core\\Application\\LibraryManagementCleanArchitecture.Application\\LibraryManagementCleanArchitecture.Application.csproj|c:\\users\\yesmiliyanage\\desktop\\librarymanagementcleanarchitecture\\core\\application\\librarymanagementcleanarchitecture.application\\exceptions\\invalidpersonexception.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{368C675E-7F0D-45A8-9B11-057D973DF33A}|Core\\Application\\LibraryManagementCleanArchitecture.Application\\LibraryManagementCleanArchitecture.Application.csproj|solutionrelative:core\\application\\librarymanagementcleanarchitecture.application\\exceptions\\invalidpersonexception.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{368C675E-7F0D-45A8-9B11-057D973DF33A}|Core\\Application\\LibraryManagementCleanArchitecture.Application\\LibraryManagementCleanArchitecture.Application.csproj|c:\\users\\yesmiliyanage\\desktop\\librarymanagementcleanarchitecture\\core\\application\\librarymanagementcleanarchitecture.application\\usecases\\library\\commands\\returnbookcommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{368C675E-7F0D-45A8-9B11-057D973DF33A}|Core\\Application\\LibraryManagementCleanArchitecture.Application\\LibraryManagementCleanArchitecture.Application.csproj|solutionrelative:core\\application\\librarymanagementcleanarchitecture.application\\usecases\\library\\commands\\returnbookcommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{22A3584F-1F14-4A22-AA98-3D3792F6B024}|Infrastructure\\Persistance\\LibraryManagementCleanArchitecture.Persistance\\LibraryManagementCleanArchitecture.Persistance.csproj|c:\\users\\yesmiliyanage\\desktop\\librarymanagementcleanarchitecture\\infrastructure\\persistance\\librarymanagementcleanarchitecture.persistance\\repository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{22A3584F-1F14-4A22-AA98-3D3792F6B024}|Infrastructure\\Persistance\\LibraryManagementCleanArchitecture.Persistance\\LibraryManagementCleanArchitecture.Persistance.csproj|solutionrelative:infrastructure\\persistance\\librarymanagementcleanarchitecture.persistance\\repository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{368C675E-7F0D-45A8-9B11-057D973DF33A}|Core\\Application\\LibraryManagementCleanArchitecture.Application\\LibraryManagementCleanArchitecture.Application.csproj|c:\\users\\yesmiliyanage\\desktop\\librarymanagementcleanarchitecture\\core\\application\\librarymanagementcleanarchitecture.application\\interfaces\\irepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{368C675E-7F0D-45A8-9B11-057D973DF33A}|Core\\Application\\LibraryManagementCleanArchitecture.Application\\LibraryManagementCleanArchitecture.Application.csproj|solutionrelative:core\\application\\librarymanagementcleanarchitecture.application\\interfaces\\irepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{368C675E-7F0D-45A8-9B11-057D973DF33A}|Core\\Application\\LibraryManagementCleanArchitecture.Application\\LibraryManagementCleanArchitecture.Application.csproj|c:\\users\\yesmiliyanage\\desktop\\librarymanagementcleanarchitecture\\core\\application\\librarymanagementcleanarchitecture.application\\usecases\\books\\commands\\createbookcommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{368C675E-7F0D-45A8-9B11-057D973DF33A}|Core\\Application\\LibraryManagementCleanArchitecture.Application\\LibraryManagementCleanArchitecture.Application.csproj|solutionrelative:core\\application\\librarymanagementcleanarchitecture.application\\usecases\\books\\commands\\createbookcommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{368C675E-7F0D-45A8-9B11-057D973DF33A}|Core\\Application\\LibraryManagementCleanArchitecture.Application\\LibraryManagementCleanArchitecture.Application.csproj|c:\\users\\yesmiliyanage\\desktop\\librarymanagementcleanarchitecture\\core\\application\\librarymanagementcleanarchitecture.application\\usecases\\books\\commands\\deletebookcommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{368C675E-7F0D-45A8-9B11-057D973DF33A}|Core\\Application\\LibraryManagementCleanArchitecture.Application\\LibraryManagementCleanArchitecture.Application.csproj|solutionrelative:core\\application\\librarymanagementcleanarchitecture.application\\usecases\\books\\commands\\deletebookcommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{0D1C8537-DD83-4E31-A143-4EBC1ABA7064}|API\\LibraryManagementCleanArchitecture.API\\LibraryManagementCleanArchitecture.API.csproj|c:\\users\\yesmiliyanage\\desktop\\librarymanagementcleanarchitecture\\api\\librarymanagementcleanarchitecture.api\\extensions\\iendpointgroup.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0D1C8537-DD83-4E31-A143-4EBC1ABA7064}|API\\LibraryManagementCleanArchitecture.API\\LibraryManagementCleanArchitecture.API.csproj|solutionrelative:api\\librarymanagementcleanarchitecture.api\\extensions\\iendpointgroup.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -90,50 +105,50 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 15,
+          "SelectedChildIndex": 6,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "BookNotFoundException.cs",
-              "DocumentMoniker": "C:\\Users\\YesmiLiyanage\\Desktop\\LibraryManagementCleanArchitecture\\Core\\Application\\LibraryManagementCleanArchitecture.Application\\Exceptions\\BookNotFoundException.cs",
-              "RelativeDocumentMoniker": "Core\\Application\\LibraryManagementCleanArchitecture.Application\\Exceptions\\BookNotFoundException.cs",
-              "ToolTip": "C:\\Users\\YesmiLiyanage\\Desktop\\LibraryManagementCleanArchitecture\\Core\\Application\\LibraryManagementCleanArchitecture.Application\\Exceptions\\BookNotFoundException.cs",
-              "RelativeToolTip": "Core\\Application\\LibraryManagementCleanArchitecture.Application\\Exceptions\\BookNotFoundException.cs",
+              "DocumentIndex": 2,
+              "Title": "AddBookDto.cs",
+              "DocumentMoniker": "C:\\Users\\YesmiLiyanage\\Desktop\\LibraryManagementCleanArchitecture\\Core\\Application\\LibraryManagementCleanArchitecture.Application\\DTO\\BookDTO\\AddBookDto.cs",
+              "RelativeDocumentMoniker": "Core\\Application\\LibraryManagementCleanArchitecture.Application\\DTO\\BookDTO\\AddBookDto.cs",
+              "ToolTip": "C:\\Users\\YesmiLiyanage\\Desktop\\LibraryManagementCleanArchitecture\\Core\\Application\\LibraryManagementCleanArchitecture.Application\\DTO\\BookDTO\\AddBookDto.cs",
+              "RelativeToolTip": "Core\\Application\\LibraryManagementCleanArchitecture.Application\\DTO\\BookDTO\\AddBookDto.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-28T13:25:24.01Z",
+              "WhenOpened": "2025-06-29T10:15:32.402Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 3,
+              "Title": "BookDto.cs",
+              "DocumentMoniker": "C:\\Users\\YesmiLiyanage\\Desktop\\LibraryManagementCleanArchitecture\\Core\\Application\\LibraryManagementCleanArchitecture.Application\\DTO\\BookDTO\\BookDto.cs",
+              "RelativeDocumentMoniker": "Core\\Application\\LibraryManagementCleanArchitecture.Application\\DTO\\BookDTO\\BookDto.cs",
+              "ToolTip": "C:\\Users\\YesmiLiyanage\\Desktop\\LibraryManagementCleanArchitecture\\Core\\Application\\LibraryManagementCleanArchitecture.Application\\DTO\\BookDTO\\BookDto.cs",
+              "RelativeToolTip": "Core\\Application\\LibraryManagementCleanArchitecture.Application\\DTO\\BookDTO\\BookDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-29T10:15:27.585Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
               "Title": "PersonMappingProfile.cs",
               "DocumentMoniker": "C:\\Users\\YesmiLiyanage\\Desktop\\LibraryManagementCleanArchitecture\\Core\\Application\\LibraryManagementCleanArchitecture.Application\\Mapping\\PersonMappingProfile.cs",
               "RelativeDocumentMoniker": "Core\\Application\\LibraryManagementCleanArchitecture.Application\\Mapping\\PersonMappingProfile.cs",
               "ToolTip": "C:\\Users\\YesmiLiyanage\\Desktop\\LibraryManagementCleanArchitecture\\Core\\Application\\LibraryManagementCleanArchitecture.Application\\Mapping\\PersonMappingProfile.cs",
               "RelativeToolTip": "Core\\Application\\LibraryManagementCleanArchitecture.Application\\Mapping\\PersonMappingProfile.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAARAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-28T13:22:40.578Z",
+              "WhenOpened": "2025-06-29T10:15:14.443Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "BookMappingProfile.cs",
-              "DocumentMoniker": "C:\\Users\\YesmiLiyanage\\Desktop\\LibraryManagementCleanArchitecture\\Core\\Application\\LibraryManagementCleanArchitecture.Application\\Mapping\\BookMappingProfile.cs",
-              "RelativeDocumentMoniker": "Core\\Application\\LibraryManagementCleanArchitecture.Application\\Mapping\\BookMappingProfile.cs",
-              "ToolTip": "C:\\Users\\YesmiLiyanage\\Desktop\\LibraryManagementCleanArchitecture\\Core\\Application\\LibraryManagementCleanArchitecture.Application\\Mapping\\BookMappingProfile.cs",
-              "RelativeToolTip": "Core\\Application\\LibraryManagementCleanArchitecture.Application\\Mapping\\BookMappingProfile.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAnAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-28T13:22:09.748Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 6,
               "Title": "AddPersonDto.cs",
               "DocumentMoniker": "C:\\Users\\YesmiLiyanage\\Desktop\\LibraryManagementCleanArchitecture\\Core\\Application\\LibraryManagementCleanArchitecture.Application\\DTO\\PersonDTO\\AddPersonDto.cs",
               "RelativeDocumentMoniker": "Core\\Application\\LibraryManagementCleanArchitecture.Application\\DTO\\PersonDTO\\AddPersonDto.cs",
@@ -141,216 +156,263 @@
               "RelativeToolTip": "Core\\Application\\LibraryManagementCleanArchitecture.Application\\DTO\\PersonDTO\\AddPersonDto.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-28T13:03:22.84Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "PersonDto.cs",
-              "DocumentMoniker": "C:\\Users\\YesmiLiyanage\\Desktop\\LibraryManagementCleanArchitecture\\Core\\Application\\LibraryManagementCleanArchitecture.Application\\DTO\\PersonDTO\\PersonDto.cs",
-              "RelativeDocumentMoniker": "Core\\Application\\LibraryManagementCleanArchitecture.Application\\DTO\\PersonDTO\\PersonDto.cs",
-              "ToolTip": "C:\\Users\\YesmiLiyanage\\Desktop\\LibraryManagementCleanArchitecture\\Core\\Application\\LibraryManagementCleanArchitecture.Application\\DTO\\PersonDTO\\PersonDto.cs",
-              "RelativeToolTip": "Core\\Application\\LibraryManagementCleanArchitecture.Application\\DTO\\PersonDTO\\PersonDto.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-28T13:03:08.229Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "GetBooksQueryHandler.cs",
-              "DocumentMoniker": "C:\\Users\\YesmiLiyanage\\Desktop\\LibraryManagementCleanArchitecture\\Core\\Application\\LibraryManagementCleanArchitecture.Application\\UseCases\\Books\\Queries\\GetBooksQueryHandler.cs",
-              "RelativeDocumentMoniker": "Core\\Application\\LibraryManagementCleanArchitecture.Application\\UseCases\\Books\\Queries\\GetBooksQueryHandler.cs",
-              "ToolTip": "C:\\Users\\YesmiLiyanage\\Desktop\\LibraryManagementCleanArchitecture\\Core\\Application\\LibraryManagementCleanArchitecture.Application\\UseCases\\Books\\Queries\\GetBooksQueryHandler.cs",
-              "RelativeToolTip": "Core\\Application\\LibraryManagementCleanArchitecture.Application\\UseCases\\Books\\Queries\\GetBooksQueryHandler.cs",
-              "ViewState": "AgIAAAoAAAAAAAAAAAAAAA8AAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-28T13:02:31.492Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "GetBooksQuery.cs",
-              "DocumentMoniker": "C:\\Users\\YesmiLiyanage\\Desktop\\LibraryManagementCleanArchitecture\\Core\\Application\\LibraryManagementCleanArchitecture.Application\\UseCases\\Books\\Queries\\GetBooksQuery.cs",
-              "RelativeDocumentMoniker": "Core\\Application\\LibraryManagementCleanArchitecture.Application\\UseCases\\Books\\Queries\\GetBooksQuery.cs",
-              "ToolTip": "C:\\Users\\YesmiLiyanage\\Desktop\\LibraryManagementCleanArchitecture\\Core\\Application\\LibraryManagementCleanArchitecture.Application\\UseCases\\Books\\Queries\\GetBooksQuery.cs",
-              "RelativeToolTip": "Core\\Application\\LibraryManagementCleanArchitecture.Application\\UseCases\\Books\\Queries\\GetBooksQuery.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-28T13:02:19.145Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "GetPersonsQueryHandler.cs",
-              "DocumentMoniker": "C:\\Users\\YesmiLiyanage\\Desktop\\LibraryManagementCleanArchitecture\\Core\\Application\\LibraryManagementCleanArchitecture.Application\\UseCases\\Persons\\Queries\\GetPersonsQueryHandler.cs",
-              "RelativeDocumentMoniker": "Core\\Application\\LibraryManagementCleanArchitecture.Application\\UseCases\\Persons\\Queries\\GetPersonsQueryHandler.cs",
-              "ToolTip": "C:\\Users\\YesmiLiyanage\\Desktop\\LibraryManagementCleanArchitecture\\Core\\Application\\LibraryManagementCleanArchitecture.Application\\UseCases\\Persons\\Queries\\GetPersonsQueryHandler.cs",
-              "RelativeToolTip": "Core\\Application\\LibraryManagementCleanArchitecture.Application\\UseCases\\Persons\\Queries\\GetPersonsQueryHandler.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABwAAABCAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-28T12:57:54.359Z",
+              "WhenOpened": "2025-06-29T10:06:04.341Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 5,
-              "Title": "GetPersonsQuery.cs",
-              "DocumentMoniker": "C:\\Users\\YesmiLiyanage\\Desktop\\LibraryManagementCleanArchitecture\\Core\\Application\\LibraryManagementCleanArchitecture.Application\\UseCases\\Persons\\Queries\\GetPersonsQuery.cs",
-              "RelativeDocumentMoniker": "Core\\Application\\LibraryManagementCleanArchitecture.Application\\UseCases\\Persons\\Queries\\GetPersonsQuery.cs",
-              "ToolTip": "C:\\Users\\YesmiLiyanage\\Desktop\\LibraryManagementCleanArchitecture\\Core\\Application\\LibraryManagementCleanArchitecture.Application\\UseCases\\Persons\\Queries\\GetPersonsQuery.cs",
-              "RelativeToolTip": "Core\\Application\\LibraryManagementCleanArchitecture.Application\\UseCases\\Persons\\Queries\\GetPersonsQuery.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAAAAAAAAAAAA==",
+              "Title": "PersonDto.cs",
+              "DocumentMoniker": "C:\\Users\\YesmiLiyanage\\Desktop\\LibraryManagementCleanArchitecture\\Core\\Application\\LibraryManagementCleanArchitecture.Application\\DTO\\PersonDTO\\PersonDto.cs",
+              "RelativeDocumentMoniker": "Core\\Application\\LibraryManagementCleanArchitecture.Application\\DTO\\PersonDTO\\PersonDto.cs",
+              "ToolTip": "C:\\Users\\YesmiLiyanage\\Desktop\\LibraryManagementCleanArchitecture\\Core\\Application\\LibraryManagementCleanArchitecture.Application\\DTO\\PersonDTO\\PersonDto.cs",
+              "RelativeToolTip": "Core\\Application\\LibraryManagementCleanArchitecture.Application\\DTO\\PersonDTO\\PersonDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAuAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-28T12:50:13.127Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 14,
-              "Title": "InvalidPersonException.cs",
-              "DocumentMoniker": "C:\\Users\\YesmiLiyanage\\Desktop\\LibraryManagementCleanArchitecture\\Core\\Application\\LibraryManagementCleanArchitecture.Application\\Exceptions\\InvalidPersonException.cs",
-              "RelativeDocumentMoniker": "Core\\Application\\LibraryManagementCleanArchitecture.Application\\Exceptions\\InvalidPersonException.cs",
-              "ToolTip": "C:\\Users\\YesmiLiyanage\\Desktop\\LibraryManagementCleanArchitecture\\Core\\Application\\LibraryManagementCleanArchitecture.Application\\Exceptions\\InvalidPersonException.cs",
-              "RelativeToolTip": "Core\\Application\\LibraryManagementCleanArchitecture.Application\\Exceptions\\InvalidPersonException.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-28T12:42:28.846Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 18,
-              "Title": "CreateBookCommand.cs",
-              "DocumentMoniker": "C:\\Users\\YesmiLiyanage\\Desktop\\LibraryManagementCleanArchitecture\\Core\\Application\\LibraryManagementCleanArchitecture.Application\\UseCases\\Books\\Commands\\CreateBookCommand.cs",
-              "RelativeDocumentMoniker": "Core\\Application\\LibraryManagementCleanArchitecture.Application\\UseCases\\Books\\Commands\\CreateBookCommand.cs",
-              "ToolTip": "C:\\Users\\YesmiLiyanage\\Desktop\\LibraryManagementCleanArchitecture\\Core\\Application\\LibraryManagementCleanArchitecture.Application\\UseCases\\Books\\Commands\\CreateBookCommand.cs",
-              "RelativeToolTip": "Core\\Application\\LibraryManagementCleanArchitecture.Application\\UseCases\\Books\\Commands\\CreateBookCommand.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-28T11:58:20.634Z",
+              "WhenOpened": "2025-06-29T10:06:02.322Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 8,
-              "Title": "ReturnBookCommandHandler.cs",
-              "DocumentMoniker": "C:\\Users\\YesmiLiyanage\\Desktop\\LibraryManagementCleanArchitecture\\Core\\Application\\LibraryManagementCleanArchitecture.Application\\UseCases\\Library\\Commands\\ReturnBookCommandHandler.cs",
-              "RelativeDocumentMoniker": "Core\\Application\\LibraryManagementCleanArchitecture.Application\\UseCases\\Library\\Commands\\ReturnBookCommandHandler.cs",
-              "ToolTip": "C:\\Users\\YesmiLiyanage\\Desktop\\LibraryManagementCleanArchitecture\\Core\\Application\\LibraryManagementCleanArchitecture.Application\\UseCases\\Library\\Commands\\ReturnBookCommandHandler.cs",
-              "RelativeToolTip": "Core\\Application\\LibraryManagementCleanArchitecture.Application\\UseCases\\Library\\Commands\\ReturnBookCommandHandler.cs",
-              "ViewState": "AgIAAA0AAAAAAAAAAAAQwCAAAAANAAAAAAAAAA==",
+              "Title": "UnitOfWork.cs",
+              "DocumentMoniker": "C:\\Users\\YesmiLiyanage\\Desktop\\LibraryManagementCleanArchitecture\\Infrastructure\\Persistance\\LibraryManagementCleanArchitecture.Persistance\\UnitOfWork.cs",
+              "RelativeDocumentMoniker": "Infrastructure\\Persistance\\LibraryManagementCleanArchitecture.Persistance\\UnitOfWork.cs",
+              "ToolTip": "C:\\Users\\YesmiLiyanage\\Desktop\\LibraryManagementCleanArchitecture\\Infrastructure\\Persistance\\LibraryManagementCleanArchitecture.Persistance\\UnitOfWork.cs",
+              "RelativeToolTip": "Infrastructure\\Persistance\\LibraryManagementCleanArchitecture.Persistance\\UnitOfWork.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-28T11:58:05.632Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 15,
-              "Title": "ReturnBookCommand.cs",
-              "DocumentMoniker": "C:\\Users\\YesmiLiyanage\\Desktop\\LibraryManagementCleanArchitecture\\Core\\Application\\LibraryManagementCleanArchitecture.Application\\UseCases\\Library\\Commands\\ReturnBookCommand.cs",
-              "RelativeDocumentMoniker": "Core\\Application\\LibraryManagementCleanArchitecture.Application\\UseCases\\Library\\Commands\\ReturnBookCommand.cs",
-              "ToolTip": "C:\\Users\\YesmiLiyanage\\Desktop\\LibraryManagementCleanArchitecture\\Core\\Application\\LibraryManagementCleanArchitecture.Application\\UseCases\\Library\\Commands\\ReturnBookCommand.cs",
-              "RelativeToolTip": "Core\\Application\\LibraryManagementCleanArchitecture.Application\\UseCases\\Library\\Commands\\ReturnBookCommand.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAABAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-28T11:57:51.396Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "BorrowBookCommandHandler.cs",
-              "DocumentMoniker": "C:\\Users\\YesmiLiyanage\\Desktop\\LibraryManagementCleanArchitecture\\Core\\Application\\LibraryManagementCleanArchitecture.Application\\UseCases\\Library\\Commands\\BorrowBookCommandHandler.cs",
-              "RelativeDocumentMoniker": "Core\\Application\\LibraryManagementCleanArchitecture.Application\\UseCases\\Library\\Commands\\BorrowBookCommandHandler.cs",
-              "ToolTip": "C:\\Users\\YesmiLiyanage\\Desktop\\LibraryManagementCleanArchitecture\\Core\\Application\\LibraryManagementCleanArchitecture.Application\\UseCases\\Library\\Commands\\BorrowBookCommandHandler.cs",
-              "RelativeToolTip": "Core\\Application\\LibraryManagementCleanArchitecture.Application\\UseCases\\Library\\Commands\\BorrowBookCommandHandler.cs",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAAAA4AAAA1AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-28T11:57:36.681Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 12,
-              "Title": "BorrowBookCommand.cs",
-              "DocumentMoniker": "C:\\Users\\YesmiLiyanage\\Desktop\\LibraryManagementCleanArchitecture\\Core\\Application\\LibraryManagementCleanArchitecture.Application\\UseCases\\Library\\Commands\\BorrowBookCommand.cs",
-              "RelativeDocumentMoniker": "Core\\Application\\LibraryManagementCleanArchitecture.Application\\UseCases\\Library\\Commands\\BorrowBookCommand.cs",
-              "ToolTip": "C:\\Users\\YesmiLiyanage\\Desktop\\LibraryManagementCleanArchitecture\\Core\\Application\\LibraryManagementCleanArchitecture.Application\\UseCases\\Library\\Commands\\BorrowBookCommand.cs",
-              "RelativeToolTip": "Core\\Application\\LibraryManagementCleanArchitecture.Application\\UseCases\\Library\\Commands\\BorrowBookCommand.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAABXAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-28T11:57:13.007Z",
+              "WhenOpened": "2025-06-29T10:04:39.362Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "CreateBookCommadHandler.cs",
-              "DocumentMoniker": "C:\\Users\\YesmiLiyanage\\Desktop\\LibraryManagementCleanArchitecture\\Core\\Application\\LibraryManagementCleanArchitecture.Application\\UseCases\\Books\\Commands\\CreateBookCommadHandler.cs",
-              "RelativeDocumentMoniker": "Core\\Application\\LibraryManagementCleanArchitecture.Application\\UseCases\\Books\\Commands\\CreateBookCommadHandler.cs",
-              "ToolTip": "C:\\Users\\YesmiLiyanage\\Desktop\\LibraryManagementCleanArchitecture\\Core\\Application\\LibraryManagementCleanArchitecture.Application\\UseCases\\Books\\Commands\\CreateBookCommadHandler.cs",
-              "RelativeToolTip": "Core\\Application\\LibraryManagementCleanArchitecture.Application\\UseCases\\Books\\Commands\\CreateBookCommadHandler.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABsAAAAwAAAAAAAAAA==",
+              "Title": "ReturnBookCommandHandler.cs",
+              "DocumentMoniker": "C:\\Users\\YesmiLiyanage\\Desktop\\LibraryManagementCleanArchitecture\\Core\\Application\\LibraryManagementCleanArchitecture.Application\\UseCases\\Library\\Commands\\ReturnBookCommandHandler.cs",
+              "RelativeDocumentMoniker": "Core\\Application\\LibraryManagementCleanArchitecture.Application\\UseCases\\Library\\Commands\\ReturnBookCommandHandler.cs",
+              "ToolTip": "C:\\Users\\YesmiLiyanage\\Desktop\\LibraryManagementCleanArchitecture\\Core\\Application\\LibraryManagementCleanArchitecture.Application\\UseCases\\Library\\Commands\\ReturnBookCommandHandler.cs",
+              "RelativeToolTip": "Core\\Application\\LibraryManagementCleanArchitecture.Application\\UseCases\\Library\\Commands\\ReturnBookCommandHandler.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-28T11:34:47.659Z",
+              "WhenOpened": "2025-06-29T09:58:57.785Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 19,
-              "Title": "DeleteBookCommand.cs",
-              "DocumentMoniker": "C:\\Users\\YesmiLiyanage\\Desktop\\LibraryManagementCleanArchitecture\\Core\\Application\\LibraryManagementCleanArchitecture.Application\\UseCases\\Books\\Commands\\DeleteBookCommand.cs",
-              "RelativeDocumentMoniker": "Core\\Application\\LibraryManagementCleanArchitecture.Application\\UseCases\\Books\\Commands\\DeleteBookCommand.cs",
-              "ToolTip": "C:\\Users\\YesmiLiyanage\\Desktop\\LibraryManagementCleanArchitecture\\Core\\Application\\LibraryManagementCleanArchitecture.Application\\UseCases\\Books\\Commands\\DeleteBookCommand.cs",
-              "RelativeToolTip": "Core\\Application\\LibraryManagementCleanArchitecture.Application\\UseCases\\Books\\Commands\\DeleteBookCommand.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-28T11:30:58.049Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 16,
-              "Title": "Repository.cs",
-              "DocumentMoniker": "C:\\Users\\YesmiLiyanage\\Desktop\\LibraryManagementCleanArchitecture\\Infrastructure\\Persistance\\LibraryManagementCleanArchitecture.Persistance\\Repository.cs",
-              "RelativeDocumentMoniker": "Infrastructure\\Persistance\\LibraryManagementCleanArchitecture.Persistance\\Repository.cs",
-              "ToolTip": "C:\\Users\\YesmiLiyanage\\Desktop\\LibraryManagementCleanArchitecture\\Infrastructure\\Persistance\\LibraryManagementCleanArchitecture.Persistance\\Repository.cs",
-              "RelativeToolTip": "Infrastructure\\Persistance\\LibraryManagementCleanArchitecture.Persistance\\Repository.cs",
-              "ViewState": "AgIAABAAAAAAAAAAAAAQwB4AAABGAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-28T11:25:27.369Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 10,
               "Title": "DeleteBookCommandHandler.cs",
               "DocumentMoniker": "C:\\Users\\YesmiLiyanage\\Desktop\\LibraryManagementCleanArchitecture\\Core\\Application\\LibraryManagementCleanArchitecture.Application\\UseCases\\Books\\Commands\\DeleteBookCommandHandler.cs",
               "RelativeDocumentMoniker": "Core\\Application\\LibraryManagementCleanArchitecture.Application\\UseCases\\Books\\Commands\\DeleteBookCommandHandler.cs",
               "ToolTip": "C:\\Users\\YesmiLiyanage\\Desktop\\LibraryManagementCleanArchitecture\\Core\\Application\\LibraryManagementCleanArchitecture.Application\\UseCases\\Books\\Commands\\DeleteBookCommandHandler.cs",
               "RelativeToolTip": "Core\\Application\\LibraryManagementCleanArchitecture.Application\\UseCases\\Books\\Commands\\DeleteBookCommandHandler.cs",
-              "ViewState": "AgIAAAsAAAAAAAAAAAAAwBgAAAAzAAAAAAAAAA==",
+              "ViewState": "AgIAABUAAAAAAAAAAAAUwBoAAAAzAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-28T11:22:34.237Z",
+              "WhenOpened": "2025-06-29T09:58:29.812Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 17,
+              "DocumentIndex": 11,
               "Title": "IRepository.cs",
               "DocumentMoniker": "C:\\Users\\YesmiLiyanage\\Desktop\\LibraryManagementCleanArchitecture\\Core\\Application\\LibraryManagementCleanArchitecture.Application\\Interfaces\\IRepository.cs",
               "RelativeDocumentMoniker": "Core\\Application\\LibraryManagementCleanArchitecture.Application\\Interfaces\\IRepository.cs",
               "ToolTip": "C:\\Users\\YesmiLiyanage\\Desktop\\LibraryManagementCleanArchitecture\\Core\\Application\\LibraryManagementCleanArchitecture.Application\\Interfaces\\IRepository.cs",
               "RelativeToolTip": "Core\\Application\\LibraryManagementCleanArchitecture.Application\\Interfaces\\IRepository.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAMAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAjAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-27T09:07:53.227Z",
+              "WhenOpened": "2025-06-29T09:57:01.985Z",
               "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Person.cs",
+              "DocumentMoniker": "C:\\Users\\YesmiLiyanage\\Desktop\\LibraryManagementCleanArchitecture\\Core\\Domain\\LibraryManagementCleanArchitecture.Domain\\Entities\\Person.cs",
+              "RelativeDocumentMoniker": "Core\\Domain\\LibraryManagementCleanArchitecture.Domain\\Entities\\Person.cs",
+              "ToolTip": "C:\\Users\\YesmiLiyanage\\Desktop\\LibraryManagementCleanArchitecture\\Core\\Domain\\LibraryManagementCleanArchitecture.Domain\\Entities\\Person.cs",
+              "RelativeToolTip": "Core\\Domain\\LibraryManagementCleanArchitecture.Domain\\Entities\\Person.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAApAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-29T09:55:02.739Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "BorrowBookCommandHandler.cs",
+              "DocumentMoniker": "C:\\Users\\YesmiLiyanage\\Desktop\\LibraryManagementCleanArchitecture\\Core\\Application\\LibraryManagementCleanArchitecture.Application\\UseCases\\Library\\Commands\\BorrowBookCommandHandler.cs",
+              "RelativeDocumentMoniker": "Core\\Application\\LibraryManagementCleanArchitecture.Application\\UseCases\\Library\\Commands\\BorrowBookCommandHandler.cs",
+              "ToolTip": "C:\\Users\\YesmiLiyanage\\Desktop\\LibraryManagementCleanArchitecture\\Core\\Application\\LibraryManagementCleanArchitecture.Application\\UseCases\\Library\\Commands\\BorrowBookCommandHandler.cs",
+              "RelativeToolTip": "Core\\Application\\LibraryManagementCleanArchitecture.Application\\UseCases\\Library\\Commands\\BorrowBookCommandHandler.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-29T09:54:26.583Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "dbo.People [Data]",
+              "DocumentMoniker": "ViewDataWindow_MSSQL__/YESMIL_LT_SQLEXPRESS/LibraryDatabase/True/SqlTable/dbo.People.sql",
+              "ToolTip": "dbo.People [Data]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000826|",
+              "WhenOpened": "2025-06-29T09:52:03.513Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "AssemblyReference.cs",
+              "DocumentMoniker": "C:\\Users\\YesmiLiyanage\\Desktop\\LibraryManagementCleanArchitecture\\Core\\Application\\LibraryManagementCleanArchitecture.Application\\AssemblyReference.cs",
+              "RelativeDocumentMoniker": "Core\\Application\\LibraryManagementCleanArchitecture.Application\\AssemblyReference.cs",
+              "ToolTip": "C:\\Users\\YesmiLiyanage\\Desktop\\LibraryManagementCleanArchitecture\\Core\\Application\\LibraryManagementCleanArchitecture.Application\\AssemblyReference.cs",
+              "RelativeToolTip": "Core\\Application\\LibraryManagementCleanArchitecture.Application\\AssemblyReference.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-29T09:46:27.514Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "GetBooksQueryHandler.cs",
+              "DocumentMoniker": "C:\\Users\\YesmiLiyanage\\Desktop\\LibraryManagementCleanArchitecture\\Core\\Application\\LibraryManagementCleanArchitecture.Application\\UseCases\\Books\\Queries\\GetBooksQueryHandler.cs",
+              "RelativeDocumentMoniker": "Core\\Application\\LibraryManagementCleanArchitecture.Application\\UseCases\\Books\\Queries\\GetBooksQueryHandler.cs",
+              "ToolTip": "C:\\Users\\YesmiLiyanage\\Desktop\\LibraryManagementCleanArchitecture\\Core\\Application\\LibraryManagementCleanArchitecture.Application\\UseCases\\Books\\Queries\\GetBooksQueryHandler.cs",
+              "RelativeToolTip": "Core\\Application\\LibraryManagementCleanArchitecture.Application\\UseCases\\Books\\Queries\\GetBooksQueryHandler.cs",
+              "ViewState": "AgIAAAsAAAAAAAAAAAAAwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-29T09:37:35.274Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "GetMembersQueryHandler.cs",
+              "DocumentMoniker": "C:\\Users\\YesmiLiyanage\\Desktop\\LibraryManagementCleanArchitecture\\Core\\Application\\LibraryManagementCleanArchitecture.Application\\UseCases\\Persons\\Queries\\GetMembersQueryHandler.cs",
+              "RelativeDocumentMoniker": "Core\\Application\\LibraryManagementCleanArchitecture.Application\\UseCases\\Persons\\Queries\\GetMembersQueryHandler.cs",
+              "ToolTip": "C:\\Users\\YesmiLiyanage\\Desktop\\LibraryManagementCleanArchitecture\\Core\\Application\\LibraryManagementCleanArchitecture.Application\\UseCases\\Persons\\Queries\\GetMembersQueryHandler.cs",
+              "RelativeToolTip": "Core\\Application\\LibraryManagementCleanArchitecture.Application\\UseCases\\Persons\\Queries\\GetMembersQueryHandler.cs",
+              "ViewState": "AgIAAAsAAAAAAAAAAAAAwCgAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-29T09:29:37.783Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "GetMembersQuery.cs",
+              "DocumentMoniker": "C:\\Users\\YesmiLiyanage\\Desktop\\LibraryManagementCleanArchitecture\\Core\\Application\\LibraryManagementCleanArchitecture.Application\\UseCases\\Persons\\Queries\\GetMembersQuery.cs",
+              "RelativeDocumentMoniker": "Core\\Application\\LibraryManagementCleanArchitecture.Application\\UseCases\\Persons\\Queries\\GetMembersQuery.cs",
+              "ToolTip": "C:\\Users\\YesmiLiyanage\\Desktop\\LibraryManagementCleanArchitecture\\Core\\Application\\LibraryManagementCleanArchitecture.Application\\UseCases\\Persons\\Queries\\GetMembersQuery.cs",
+              "RelativeToolTip": "Core\\Application\\LibraryManagementCleanArchitecture.Application\\UseCases\\Persons\\Queries\\GetMembersQuery.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAABDAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-29T09:29:33.182Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\YesmiLiyanage\\Desktop\\LibraryManagementCleanArchitecture\\API\\LibraryManagementCleanArchitecture.API\\Program.cs",
+              "RelativeDocumentMoniker": "API\\LibraryManagementCleanArchitecture.API\\Program.cs",
+              "ToolTip": "C:\\Users\\YesmiLiyanage\\Desktop\\LibraryManagementCleanArchitecture\\API\\LibraryManagementCleanArchitecture.API\\Program.cs",
+              "RelativeToolTip": "API\\LibraryManagementCleanArchitecture.API\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAkAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-29T09:23:14.275Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "GetPersonsQueryHandler.cs",
+              "DocumentMoniker": "C:\\Users\\YesmiLiyanage\\Desktop\\LibraryManagementCleanArchitecture\\Core\\Application\\LibraryManagementCleanArchitecture.Application\\UseCases\\Persons\\Queries\\GetPersonsQueryHandler.cs",
+              "RelativeDocumentMoniker": "Core\\Application\\LibraryManagementCleanArchitecture.Application\\UseCases\\Persons\\Queries\\GetPersonsQueryHandler.cs",
+              "ToolTip": "C:\\Users\\YesmiLiyanage\\Desktop\\LibraryManagementCleanArchitecture\\Core\\Application\\LibraryManagementCleanArchitecture.Application\\UseCases\\Persons\\Queries\\GetPersonsQueryHandler.cs",
+              "RelativeToolTip": "Core\\Application\\LibraryManagementCleanArchitecture.Application\\UseCases\\Persons\\Queries\\GetPersonsQueryHandler.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAAB8AAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-29T09:22:19.394Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "GetPersonsQuery.cs",
+              "DocumentMoniker": "C:\\Users\\YesmiLiyanage\\Desktop\\LibraryManagementCleanArchitecture\\Core\\Application\\LibraryManagementCleanArchitecture.Application\\UseCases\\Persons\\Queries\\GetPersonsQuery.cs",
+              "RelativeDocumentMoniker": "Core\\Application\\LibraryManagementCleanArchitecture.Application\\UseCases\\Persons\\Queries\\GetPersonsQuery.cs",
+              "ToolTip": "C:\\Users\\YesmiLiyanage\\Desktop\\LibraryManagementCleanArchitecture\\Core\\Application\\LibraryManagementCleanArchitecture.Application\\UseCases\\Persons\\Queries\\GetPersonsQuery.cs",
+              "RelativeToolTip": "Core\\Application\\LibraryManagementCleanArchitecture.Application\\UseCases\\Persons\\Queries\\GetPersonsQuery.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-29T09:22:15.472Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 22,
+              "Title": "Enums.cs",
+              "DocumentMoniker": "C:\\Users\\YesmiLiyanage\\Desktop\\LibraryManagementCleanArchitecture\\Core\\Domain\\LibraryManagementCleanArchitecture.Domain\\Enums\\Enums.cs",
+              "RelativeDocumentMoniker": "Core\\Domain\\LibraryManagementCleanArchitecture.Domain\\Enums\\Enums.cs",
+              "ToolTip": "C:\\Users\\YesmiLiyanage\\Desktop\\LibraryManagementCleanArchitecture\\Core\\Domain\\LibraryManagementCleanArchitecture.Domain\\Enums\\Enums.cs",
+              "RelativeToolTip": "Core\\Domain\\LibraryManagementCleanArchitecture.Domain\\Enums\\Enums.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-29T06:56:50.752Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "Repository.cs",
+              "DocumentMoniker": "C:\\Users\\YesmiLiyanage\\Desktop\\LibraryManagementCleanArchitecture\\Infrastructure\\Persistance\\LibraryManagementCleanArchitecture.Persistance\\Repository.cs",
+              "RelativeDocumentMoniker": "Infrastructure\\Persistance\\LibraryManagementCleanArchitecture.Persistance\\Repository.cs",
+              "ToolTip": "C:\\Users\\YesmiLiyanage\\Desktop\\LibraryManagementCleanArchitecture\\Infrastructure\\Persistance\\LibraryManagementCleanArchitecture.Persistance\\Repository.cs",
+              "RelativeToolTip": "Infrastructure\\Persistance\\LibraryManagementCleanArchitecture.Persistance\\Repository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAB8AAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-29T06:55:57.151Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "DataContext.cs",
+              "DocumentMoniker": "C:\\Users\\YesmiLiyanage\\Desktop\\LibraryManagementCleanArchitecture\\Infrastructure\\Persistance\\LibraryManagementCleanArchitecture.Persistance\\DataContext.cs",
+              "RelativeDocumentMoniker": "Infrastructure\\Persistance\\LibraryManagementCleanArchitecture.Persistance\\DataContext.cs",
+              "ToolTip": "C:\\Users\\YesmiLiyanage\\Desktop\\LibraryManagementCleanArchitecture\\Infrastructure\\Persistance\\LibraryManagementCleanArchitecture.Persistance\\DataContext.cs",
+              "RelativeToolTip": "Infrastructure\\Persistance\\LibraryManagementCleanArchitecture.Persistance\\DataContext.cs",
+              "ViewState": "AgIAAA0AAAAAAAAAAAAQwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-29T06:55:53.483Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
+              "Title": "PersonConfiguration.cs",
+              "DocumentMoniker": "C:\\Users\\YesmiLiyanage\\Desktop\\LibraryManagementCleanArchitecture\\Infrastructure\\Persistance\\LibraryManagementCleanArchitecture.Persistance\\Configurations\\PersonConfiguration.cs",
+              "RelativeDocumentMoniker": "Infrastructure\\Persistance\\LibraryManagementCleanArchitecture.Persistance\\Configurations\\PersonConfiguration.cs",
+              "ToolTip": "C:\\Users\\YesmiLiyanage\\Desktop\\LibraryManagementCleanArchitecture\\Infrastructure\\Persistance\\LibraryManagementCleanArchitecture.Persistance\\Configurations\\PersonConfiguration.cs",
+              "RelativeToolTip": "Infrastructure\\Persistance\\LibraryManagementCleanArchitecture.Persistance\\Configurations\\PersonConfiguration.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-29T06:55:28.017Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 23,
+              "Title": "IEndpointGroup.cs",
+              "DocumentMoniker": "C:\\Users\\YesmiLiyanage\\Desktop\\LibraryManagementCleanArchitecture\\API\\LibraryManagementCleanArchitecture.API\\Extensions\\IEndpointGroup.cs",
+              "RelativeDocumentMoniker": "API\\LibraryManagementCleanArchitecture.API\\Extensions\\IEndpointGroup.cs",
+              "ToolTip": "C:\\Users\\YesmiLiyanage\\Desktop\\LibraryManagementCleanArchitecture\\API\\LibraryManagementCleanArchitecture.API\\Extensions\\IEndpointGroup.cs",
+              "RelativeToolTip": "API\\LibraryManagementCleanArchitecture.API\\Extensions\\IEndpointGroup.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-29T06:21:40.493Z"
             }
           ]
         }

@@ -1,5 +1,4 @@
 ﻿using LibraryManagementCleanArchitecture.Application.Interfaces;
-using LibraryManagementCleanArchitecture.Domain.Entities;
 using Microsoft.EntityFrameworkCore;
 using System.Linq.Expressions;
 
@@ -26,9 +25,17 @@ namespace LibraryManagementCleanArchitecture.Persistance
 
         public async Task AddAsync(T entity) => await entities.AddAsync(entity);
 
-        public async Task DeleteAsync(T entity) => entities.Remove(entity);
+        public Task DeleteAsync(T entity)
+        {
+            entities.Remove(entity);
+            return Task.CompletedTask;
+        }
 
-        public async Task Update(T entity) => entities.Update(entity);
+        public Task UpdateAsync(T entity)
+        {
+            entities.Update(entity);
+            return Task.CompletedTask;
+        }
     }
 
 }

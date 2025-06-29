@@ -1,5 +1,5 @@
 ﻿using MediatR;
-using static LibraryManagementSystemEFCore.Domain.Enums.Enums;
+using static LibraryManagementCleanArchitecture.Domain.Enums.Enums;
 
 namespace LibraryManagementCleanArchitecture.Application.UseCases.Books.Commands
 {

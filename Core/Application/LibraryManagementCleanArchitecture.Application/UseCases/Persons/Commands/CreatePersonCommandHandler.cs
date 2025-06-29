@@ -2,17 +2,19 @@
 using LibraryManagementCleanArchitecture.Application.Interfaces;
 using LibraryManagementCleanArchitecture.Domain.Entities;
 using MediatR;
-using static LibraryManagementSystemEFCore.Domain.Enums.Enums;
+using static LibraryManagementCleanArchitecture.Domain.Enums.Enums;
 
 namespace LibraryManagementCleanArchitecture.Application.UseCases.Persons.Commands
 {
     public class CreatePersonCommandHandler : IRequestHandler<CreatePersonCommand, string>
     {
         private readonly IRepository<Person> personRepository;
+        private readonly IUnitOfWork unitOfWork;
 
-        public CreatePersonCommandHandler(IRepository<Person> personRepository)
+        public CreatePersonCommandHandler(IRepository<Person> personRepository, IUnitOfWork unitOfWork)
         {
             this.personRepository = personRepository;
+            this.unitOfWork = unitOfWork;
         }
 
         public async Task<string> Handle(CreatePersonCommand request, CancellationToken cancellationToken)
@@ -26,6 +28,7 @@ namespace LibraryManagementCleanArchitecture.Application.UseCases.Persons.Comman
             };
 
             await personRepository.AddAsync(person);
+            await unitOfWork.CompleteAsync();
             return person.Id;
         }
     }

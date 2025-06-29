@@ -4,7 +4,7 @@ using LibraryManagementCleanArchitecture.Application.Exceptions;
 using LibraryManagementCleanArchitecture.Application.Interfaces;
 using LibraryManagementCleanArchitecture.Domain.Entities;
 using MediatR;
-using static LibraryManagementSystemEFCore.Domain.Enums.Enums;
+using static LibraryManagementCleanArchitecture.Domain.Enums.Enums;
 
 namespace LibraryManagementCleanArchitecture.Application.UseCases.Books.Queries
 {

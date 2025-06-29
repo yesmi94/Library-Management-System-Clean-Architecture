@@ -2,7 +2,7 @@
 using LibraryManagementCleanArchitecture.Application.Interfaces;
 using LibraryManagementCleanArchitecture.Domain.Entities;
 using MediatR;
-using static LibraryManagementSystemEFCore.Domain.Enums.Enums;
+using static LibraryManagementCleanArchitecture.Domain.Enums.Enums;
 
 namespace LibraryManagementCleanArchitecture.Application.UseCases.Library.Commands
 {
@@ -10,9 +10,12 @@ namespace LibraryManagementCleanArchitecture.Application.UseCases.Library.Comman
     {
         private readonly IRepository<Book> bookRepository;
         private readonly IRepository<Person> personRepository;
-        public ReturnBookCommandHandler(IRepository<Book> bookRepository, IRepository<Person> personRepository) {
+        private readonly IUnitOfWork unitOfWork;
+        public ReturnBookCommandHandler(IRepository<Book> bookRepository, IRepository<Person> personRepository, IUnitOfWork unitOfWork)
+        {
             this.bookRepository = bookRepository;
             this.personRepository = personRepository;
+            this.unitOfWork = unitOfWork;
         }
         public async Task<string> Handle(ReturnBookCommand request, CancellationToken cancellationToken)
         {
@@ -33,6 +36,11 @@ namespace LibraryManagementCleanArchitecture.Application.UseCases.Library.Comman
             }
 
             book.IsAvailable = true;
+            person.BorrowedBooksNum--;
+
+            await bookRepository.UpdateAsync(book);
+            await personRepository.UpdateAsync(person);
+            await unitOfWork.CompleteAsync();
 
             return book.Id;
 

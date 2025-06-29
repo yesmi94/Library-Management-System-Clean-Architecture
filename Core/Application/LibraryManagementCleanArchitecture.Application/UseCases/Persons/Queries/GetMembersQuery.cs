@@ -3,6 +3,5 @@ using MediatR;
 
 namespace LibraryManagementCleanArchitecture.Application.UseCases.Persons.Queries
 {
-    public record GetPersonsQuery() : IRequest<List<PersonDto>>;
-
+    public record GetMembersQuery() : IRequest<List<PersonDto>>;
 }
