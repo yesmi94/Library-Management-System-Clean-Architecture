@@ -1,7 +1,7 @@
 ﻿using MediatR;
 using static LibraryManagementCleanArchitecture.Domain.Enums.Enums;
 
-namespace LibraryManagementCleanArchitecture.Application.UseCases.Books.Commands
+namespace LibraryManagementCleanArchitecture.Application.UseCases.Books.CreateBook
 {
     public record CreateBookCommand
     (

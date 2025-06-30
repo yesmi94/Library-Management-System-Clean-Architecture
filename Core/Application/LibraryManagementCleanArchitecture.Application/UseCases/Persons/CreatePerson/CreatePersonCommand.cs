@@ -6,7 +6,7 @@ using System.Text;
 using System.Threading.Tasks;
 using static LibraryManagementCleanArchitecture.Domain.Enums.Enums;
 
-namespace LibraryManagementCleanArchitecture.Application.UseCases.Persons.Commands
+namespace LibraryManagementCleanArchitecture.Application.UseCases.Persons.CreatePerson
 {
     public record CreatePersonCommand(
         string Name,

@@ -4,7 +4,7 @@ using LibraryManagementCleanArchitecture.Domain.Entities;
 using MediatR;
 using static LibraryManagementCleanArchitecture.Domain.Enums.Enums;
 
-namespace LibraryManagementCleanArchitecture.Application.UseCases.Persons.Commands
+namespace LibraryManagementCleanArchitecture.Application.UseCases.Persons.CreatePerson
 {
     public class CreatePersonCommandHandler : IRequestHandler<CreatePersonCommand, string>
     {
