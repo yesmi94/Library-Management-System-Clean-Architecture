@@ -4,6 +4,7 @@ using LibraryManagementCleanArchitecture.Application;
 using LibraryManagementCleanArchitecture.Application.Interfaces;
 using LibraryManagementCleanArchitecture.Persistance;
 using Microsoft.EntityFrameworkCore;
+using Serilog;
 
 namespace LibraryManagementCleanArchitecture.API
 {
@@ -25,7 +26,6 @@ namespace LibraryManagementCleanArchitecture.API
                 cfg.RegisterServicesFromAssembly(typeof(AssemblyReference).Assembly));
 
 
-
             builder.Services.AddScoped(typeof(IRepository<>), typeof(Repository<>));
             builder.Services.AddAutoMapper(typeof(AssemblyReference).Assembly);
             builder.Services.AddScoped<IUnitOfWork, UnitOfWork>();
@@ -36,6 +36,12 @@ namespace LibraryManagementCleanArchitecture.API
                 "Server=.\\SQLEXPRESS;Database=LibraryDatabase;Trusted_Connection=True;TrustServerCertificate=True;",
                 sqlOptions => sqlOptions.MigrationsAssembly("LibraryManagementSystemEFCore.Infrastructure"))
             );
+
+            Log.Logger = new LoggerConfiguration()
+                .MinimumLevel.Debug()
+                .WriteTo.Console()
+                .WriteTo.Seq("http://localhost:5341")
+                .CreateLogger();
 
 
             var app = builder.Build();

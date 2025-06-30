@@ -3,6 +3,7 @@ using LibraryManagementCleanArchitecture.Application.UseCases.Books.Commands;
 using LibraryManagementCleanArchitecture.Application.UseCases.Books.Queries;
 using MediatR;
 using Microsoft.AspNetCore.Mvc;
+using Serilog;
 
 namespace LibraryManagementCleanArchitecture.API.Endpoints
 {
@@ -22,6 +23,7 @@ namespace LibraryManagementCleanArchitecture.API.Endpoints
                 }
                 catch (Exception exception)
                 {
+                    Log.Error(exception, exception.Message);
                     return Results.BadRequest(exception.Message);
                 }
             });
@@ -31,10 +33,12 @@ namespace LibraryManagementCleanArchitecture.API.Endpoints
                 try
                 {
                     var bookId = await mediator.Send(command);
+                    Log.Information("Book - {bookId} added successfully", bookId);
                     return Results.Ok($"Book - {bookId} added successfully");
                 }
                 catch (Exception exception)
                 {
+                    Log.Error(exception, exception.Message);
                     return Results.BadRequest(exception.Message);
                 }
             });
@@ -45,10 +49,12 @@ namespace LibraryManagementCleanArchitecture.API.Endpoints
                 {
                     var command = new DeleteBookCommand(bookNumber);
                     var bookId = await mediator.Send(command);
-                    return Results.NoContent();
+                    Log.Information("Book - {bookId} was deleted successfully", bookId);
+                    return Results.Ok(bookId);
                 }
                 catch (Exception exception)
                 {
+                    Log.Error(exception, exception.Message);
                     return Results.NotFound(exception.Message);
                 }
             });

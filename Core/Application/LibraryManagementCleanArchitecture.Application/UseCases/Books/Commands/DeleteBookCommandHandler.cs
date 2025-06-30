@@ -22,7 +22,7 @@ namespace LibraryManagementCleanArchitecture.Application.UseCases.Books.Commands
             var book = await bookRepository.GetByIdAsync(request.BookId);
 
             if (book == null)
-                throw new BookNotFoundException("This book does not exist");
+                throw new BookNotFoundException("Failed: Trying to delete a book that does not exist. Please check the book ID and try again");
 
             await bookRepository.DeleteAsync(book);
             await unitOfWork.CompleteAsync();

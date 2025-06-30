@@ -3,6 +3,7 @@ using LibraryManagementCleanArchitecture.Application.UseCases.Persons.Commands;
 using LibraryManagementCleanArchitecture.Application.UseCases.Persons.Queries;
 using MediatR;
 using Microsoft.AspNetCore.Mvc;
+using Serilog;
 namespace LibraryManagementCleanArchitecture.API.Endpoints
 {
     public class PersonEndpoints : IEndpointGroup
@@ -17,10 +18,12 @@ namespace LibraryManagementCleanArchitecture.API.Endpoints
                 {
                     var query = new GetPersonsQuery();
                     var persons = await mediator.Send(query);
+                    Log.Information("Succuessfully retrieved the persons list");
                     return Results.Ok(persons);
                 }
                 catch (Exception exception)
                 {
+                    Log.Error(exception, exception.Message);
                     return Results.BadRequest(exception.Message);
                 }
             });
@@ -32,10 +35,12 @@ namespace LibraryManagementCleanArchitecture.API.Endpoints
                 {
                     var query = new GetMembersQuery();
                     var members = await mediator.Send(query);
+                    Log.Information("Succuessfully retrieved the members list");
                     return Results.Ok(members);
                 }
                 catch (Exception exception)
                 {
+                    Log.Error(exception, exception.Message);
                     return Results.BadRequest(exception.Message);
                 }
             });
@@ -46,10 +51,12 @@ namespace LibraryManagementCleanArchitecture.API.Endpoints
                 try
                 {
                     var personId = await mediator.Send(command);
+                    Log.Information("Person - {personId} was added successfully", personId);
                     return Results.Ok($"Person - {personId} was added successfully");
                 }
                 catch (Exception exception)
                 {
+                    Log.Error(exception, exception.Message);
                     return Results.BadRequest(exception.Message);
                 }
             });

@@ -5,8 +5,8 @@ C:\Users\YesmiLiyanage\Desktop\LibraryManagementCleanArchitecture\Core\Domain\Li
 C:\Users\YesmiLiyanage\Desktop\LibraryManagementCleanArchitecture\Core\Domain\LibraryManagementCleanArchitecture.Domain\obj\Debug\net9.0\LibraryManagementCleanArchitecture.Domain.AssemblyInfoInputs.cache
 C:\Users\YesmiLiyanage\Desktop\LibraryManagementCleanArchitecture\Core\Domain\LibraryManagementCleanArchitecture.Domain\obj\Debug\net9.0\LibraryManagementCleanArchitecture.Domain.AssemblyInfo.cs
 C:\Users\YesmiLiyanage\Desktop\LibraryManagementCleanArchitecture\Core\Domain\LibraryManagementCleanArchitecture.Domain\obj\Debug\net9.0\LibraryManagementCleanArchitecture.Domain.csproj.CoreCompileInputs.cache
+C:\Users\YesmiLiyanage\Desktop\LibraryManagementCleanArchitecture\Core\Domain\LibraryManagementCleanArchitecture.Domain\obj\Debug\net9.0\LibraryManagementCleanArchitecture.Domain.sourcelink.json
 C:\Users\YesmiLiyanage\Desktop\LibraryManagementCleanArchitecture\Core\Domain\LibraryManagementCleanArchitecture.Domain\obj\Debug\net9.0\LibraryManagementCleanArchitecture.Domain.dll
 C:\Users\YesmiLiyanage\Desktop\LibraryManagementCleanArchitecture\Core\Domain\LibraryManagementCleanArchitecture.Domain\obj\Debug\net9.0\refint\LibraryManagementCleanArchitecture.Domain.dll
 C:\Users\YesmiLiyanage\Desktop\LibraryManagementCleanArchitecture\Core\Domain\LibraryManagementCleanArchitecture.Domain\obj\Debug\net9.0\LibraryManagementCleanArchitecture.Domain.pdb
 C:\Users\YesmiLiyanage\Desktop\LibraryManagementCleanArchitecture\Core\Domain\LibraryManagementCleanArchitecture.Domain\obj\Debug\net9.0\ref\LibraryManagementCleanArchitecture.Domain.dll
-C:\Users\YesmiLiyanage\Desktop\LibraryManagementCleanArchitecture\Core\Domain\LibraryManagementCleanArchitecture.Domain\obj\Debug\net9.0\LibraryManagementCleanArchitecture.Domain.sourcelink.json

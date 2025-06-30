@@ -2,6 +2,7 @@
 using LibraryManagementCleanArchitecture.Application.UseCases.Library.Commands;
 using MediatR;
 using Microsoft.AspNetCore.Mvc;
+using Serilog;
 
 namespace LibraryManagementCleanArchitecture.API.Endpoints
 {
@@ -16,10 +17,12 @@ namespace LibraryManagementCleanArchitecture.API.Endpoints
                 try
                 {
                     await mediator.Send(new BorrowBookCommand(bookId, personId));
-                    return Results.Ok($"Book {bookId} borrowed by {personId} successfully");
+                    Log.Information("Book - {bookId} borrowed by {personId} successfully", bookId);
+                    return Results.Ok($"Book - {bookId} borrowed by {personId} successfully");
                 }
                 catch (Exception exception)
                 {
+                    Log.Error(exception, exception.Message);
                     return Results.BadRequest(exception.Message);
                 }
             });
@@ -29,10 +32,12 @@ namespace LibraryManagementCleanArchitecture.API.Endpoints
                 try
                 {
                     await mediator.Send(new ReturnBookCommand(bookId, personId));
-                    return Results.Ok($"Book {bookId} returned by {personId} successfully");
+                    Log.Information("Book - {bookId} returned by {personId} successfully", bookId);
+                    return Results.Ok($"Book - {bookId} returned by {personId} successfully");
                 }
                 catch (Exception exception)
                 {
+                    Log.Error(exception, exception.Message);
                     return Results.BadRequest(exception.Message);
                 }
             });
