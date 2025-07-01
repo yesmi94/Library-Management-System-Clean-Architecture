@@ -9,6 +9,6 @@ namespace LibraryManagementCleanArchitecture.Application.Interfaces
         Task<List<T>> FindAsync(Expression<Func<T, bool>> predicate);
         Task AddAsync(T entity);
         Task DeleteAsync(T entity);
-        Task Update(T entity);
+        Task UpdateAsync(T entity);
     }
 }

@@ -8,10 +8,12 @@ namespace LibraryManagementCleanArchitecture.Application.UseCases.Books.Commands
     {
 
         private readonly IRepository<Book> bookRepository;
+        private readonly IUnitOfWork unitOfWork;
 
-        public CreateBookCommadHandler(IRepository<Book> bookRepository)
+        public CreateBookCommadHandler(IRepository<Book> bookRepository, IUnitOfWork unitOfWork)
         {
             this.bookRepository = bookRepository;
+            this.unitOfWork = unitOfWork;
         }
 
         public async Task<string> Handle(CreateBookCommand request, CancellationToken cancellationToken)
@@ -26,6 +28,7 @@ namespace LibraryManagementCleanArchitecture.Application.UseCases.Books.Commands
             };
 
             await bookRepository.AddAsync(book);
+            await unitOfWork.CompleteAsync();
 
             return book.Id;
 

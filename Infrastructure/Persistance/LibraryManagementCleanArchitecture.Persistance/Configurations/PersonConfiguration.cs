@@ -2,7 +2,7 @@
 using LibraryManagementCleanArchitecture.Domain.Entities;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
-using static LibraryManagementSystemEFCore.Domain.Enums.Enums;
+using static LibraryManagementCleanArchitecture.Domain.Enums.Enums;
 
 namespace LibraryManagementCleanArchitecture.Persistance.Configurations
 {

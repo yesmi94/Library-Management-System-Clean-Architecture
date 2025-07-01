@@ -1,4 +1,4 @@
-﻿namespace LibraryManagementSystemEFCore.Domain.Enums
+﻿namespace LibraryManagementCleanArchitecture.Domain.Enums
 {
     public class Enums
     {

@@ -4,7 +4,7 @@ using LibraryManagementCleanArchitecture.Application.Exceptions;
 using LibraryManagementCleanArchitecture.Application.Interfaces;
 using LibraryManagementCleanArchitecture.Domain.Entities;
 using MediatR;
-using static LibraryManagementSystemEFCore.Domain.Enums.Enums;
+using static LibraryManagementCleanArchitecture.Domain.Enums.Enums;
 
 namespace LibraryManagementCleanArchitecture.Application.UseCases.Books.Queries
 {
@@ -27,12 +27,12 @@ namespace LibraryManagementCleanArchitecture.Application.UseCases.Books.Queries
 
             if (person == null)
             {
-                throw new InvalidPersonException("Please enter a valid ID");
+                throw new InvalidPersonException($"Failed: Couldn't find the person with ID - {request.personId}. Please check the ID and try again");
             }
 
             if (person.Role == UserType.MinorStaff)
             {
-                throw new InvalidPersonException("Minor staff cannot view the book list");
+                throw new InvalidPersonException("Failed: Minor staff is not allowed to view the book list");
             }
 
             var books = await bookRepository.GetAllAsync();

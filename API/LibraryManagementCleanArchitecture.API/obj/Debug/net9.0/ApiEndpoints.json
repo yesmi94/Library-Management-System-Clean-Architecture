@@ -1,1 +1,176 @@
-[]
+[
+  {
+    "ContainingType": "LibraryManagementCleanArchitecture.API.Endpoints.BookEndpoints\u002B\u003C\u003Ec",
+    "Method": "\u003CMapEndpoints\u003Eb__0_0",
+    "RelativePath": "api/books/",
+    "HttpMethod": "GET",
+    "IsController": false,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "memberId",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Void",
+        "MediaTypes": [],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "LibraryManagementCleanArchitecture.API.Endpoints.BookEndpoints\u002B\u003C\u003Ec",
+    "Method": "\u003CMapEndpoints\u003Eb__0_1",
+    "RelativePath": "api/books/",
+    "HttpMethod": "POST",
+    "IsController": false,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "command",
+        "Type": "LibraryManagementCleanArchitecture.Application.UseCases.Books.Commands.CreateBookCommand",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Void",
+        "MediaTypes": [],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "LibraryManagementCleanArchitecture.API.Endpoints.BookEndpoints\u002B\u003C\u003Ec",
+    "Method": "\u003CMapEndpoints\u003Eb__0_2",
+    "RelativePath": "api/books/{bookNumber}",
+    "HttpMethod": "DELETE",
+    "IsController": false,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "bookNumber",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Void",
+        "MediaTypes": [],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "LibraryManagementCleanArchitecture.API.Endpoints.LibraryEndpoints\u002B\u003C\u003Ec",
+    "Method": "\u003CMapEndpoints\u003Eb__0_0",
+    "RelativePath": "api/library/{bookId}/borrowings",
+    "HttpMethod": "POST",
+    "IsController": false,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "bookId",
+        "Type": "System.String",
+        "IsRequired": true
+      },
+      {
+        "Name": "personId",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Void",
+        "MediaTypes": [],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "LibraryManagementCleanArchitecture.API.Endpoints.LibraryEndpoints\u002B\u003C\u003Ec",
+    "Method": "\u003CMapEndpoints\u003Eb__0_1",
+    "RelativePath": "api/library/{bookId}/returnings",
+    "HttpMethod": "POST",
+    "IsController": false,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "bookId",
+        "Type": "System.String",
+        "IsRequired": true
+      },
+      {
+        "Name": "personId",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Void",
+        "MediaTypes": [],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "LibraryManagementCleanArchitecture.API.Endpoints.PersonEndpoints\u002B\u003C\u003Ec",
+    "Method": "\u003CMapEndpoints\u003Eb__0_0",
+    "RelativePath": "api/persons/",
+    "HttpMethod": "GET",
+    "IsController": false,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Void",
+        "MediaTypes": [],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "LibraryManagementCleanArchitecture.API.Endpoints.PersonEndpoints\u002B\u003C\u003Ec",
+    "Method": "\u003CMapEndpoints\u003Eb__0_2",
+    "RelativePath": "api/persons/",
+    "HttpMethod": "POST",
+    "IsController": false,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "command",
+        "Type": "LibraryManagementCleanArchitecture.Application.UseCases.Persons.Commands.CreatePersonCommand",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Void",
+        "MediaTypes": [],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "LibraryManagementCleanArchitecture.API.Endpoints.PersonEndpoints\u002B\u003C\u003Ec",
+    "Method": "\u003CMapEndpoints\u003Eb__0_1",
+    "RelativePath": "api/persons/members",
+    "HttpMethod": "GET",
+    "IsController": false,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Void",
+        "MediaTypes": [],
+        "StatusCode": 200
+      }
+    ]
+  }
+]

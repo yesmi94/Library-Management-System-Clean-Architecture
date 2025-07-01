@@ -4,9 +4,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using static LibraryManagementSystemEFCore.Domain.Enums.Enums;
+using static LibraryManagementCleanArchitecture.Domain.Enums.Enums;
 
-namespace LibraryManagementCleanArchitecture.Application.UseCases.Persons.Commands
+namespace LibraryManagementCleanArchitecture.Application.UseCases.Persons.CreatePerson
 {
     public record CreatePersonCommand(
         string Name,
