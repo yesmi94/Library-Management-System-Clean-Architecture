@@ -8,5 +8,6 @@ namespace LibraryManagementCleanArchitecture.Application.UseCases.Books.GetBooks
 {
     internal class GetBooksValidator
     {
+
     }
 }

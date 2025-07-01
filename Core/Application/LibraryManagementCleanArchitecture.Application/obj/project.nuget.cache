@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "RqDOF3vFBBI=",
+  "dgSpecHash": "FTkh7bSiMwc=",
   "success": true,
   "projectFilePath": "C:\\Users\\YesmiLiyanage\\Desktop\\LibraryManagementCleanArchitecture\\Core\\Application\\LibraryManagementCleanArchitecture.Application\\LibraryManagementCleanArchitecture.Application.csproj",
   "expectedPackageFiles": [
@@ -9,7 +9,8 @@
     "C:\\Users\\YesmiLiyanage\\.nuget\\packages\\mediatr.contracts\\2.0.1\\mediatr.contracts.2.0.1.nupkg.sha512",
     "C:\\Users\\YesmiLiyanage\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\8.0.0\\microsoft.extensions.dependencyinjection.abstractions.8.0.0.nupkg.sha512",
     "C:\\Users\\YesmiLiyanage\\.nuget\\packages\\microsoft.extensions.options\\8.0.0\\microsoft.extensions.options.8.0.0.nupkg.sha512",
-    "C:\\Users\\YesmiLiyanage\\.nuget\\packages\\microsoft.extensions.primitives\\8.0.0\\microsoft.extensions.primitives.8.0.0.nupkg.sha512"
+    "C:\\Users\\YesmiLiyanage\\.nuget\\packages\\microsoft.extensions.primitives\\8.0.0\\microsoft.extensions.primitives.8.0.0.nupkg.sha512",
+    "C:\\Users\\YesmiLiyanage\\.nuget\\packages\\stylecop.analyzers\\1.1.118\\stylecop.analyzers.1.1.118.nupkg.sha512"
   ],
   "logs": []
 }

@@ -1,13 +1,13 @@
 
-using LibraryManagementCleanArchitecture.API.Extensions;
-using LibraryManagementCleanArchitecture.Application;
-using LibraryManagementCleanArchitecture.Application.Interfaces;
-using LibraryManagementCleanArchitecture.Persistance;
-using Microsoft.EntityFrameworkCore;
-using Serilog;
-
 namespace LibraryManagementCleanArchitecture.API
 {
+    using LibraryManagementCleanArchitecture.API.Extensions;
+    using LibraryManagementCleanArchitecture.Application;
+    using LibraryManagementCleanArchitecture.Application.Interfaces;
+    using LibraryManagementCleanArchitecture.Persistance;
+    using Microsoft.EntityFrameworkCore;
+    using Serilog;
+
     public class Program
     {
         public static void Main(string[] args)
@@ -20,7 +20,6 @@ namespace LibraryManagementCleanArchitecture.API
             builder.Services.AddEndpointsApiExplorer();
             builder.Services.AddSwaggerGen();
 
-            // Learn more about configuring OpenAPI at https://aka.ms/aspnet/openapi
             builder.Services.AddOpenApi();
             builder.Services.AddMediatR(cfg =>
                 cfg.RegisterServicesFromAssembly(typeof(AssemblyReference).Assembly));

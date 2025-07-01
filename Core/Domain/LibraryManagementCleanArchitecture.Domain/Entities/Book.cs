@@ -1,14 +1,19 @@
-﻿using static LibraryManagementCleanArchitecture.Domain.Enums.Enums;
-
-namespace LibraryManagementCleanArchitecture.Domain.Entities
+﻿namespace LibraryManagementCleanArchitecture.Domain.Entities
 {
+    using static LibraryManagementCleanArchitecture.Domain.Enums.Enums;
+
     public class Book
     {
         public string Id { get; set; } = Guid.NewGuid().ToString("N");
+
         public string Title { get; set; }
+
         public string Author { get; set; }
+
         public string Year { get; set; }
+
         public BookCategory Category { get; set; }
+
         public bool IsAvailable { get; set; }
 
         public Book(string id, string title, string author, string year, BookCategory category, bool isAvailable)

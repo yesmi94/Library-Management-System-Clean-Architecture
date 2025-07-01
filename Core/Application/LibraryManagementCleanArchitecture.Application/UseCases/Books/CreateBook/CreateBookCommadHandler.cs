@@ -1,10 +1,10 @@
-﻿using LibraryManagementCleanArchitecture.Application.Interfaces;
-using LibraryManagementCleanArchitecture.Domain.Entities;
-using MediatR;
-
-namespace LibraryManagementCleanArchitecture.Application.UseCases.Books.Commands
+﻿namespace LibraryManagementCleanArchitecture.Application.UseCases.Books.CreateBook
 {
-    public class CreateBookCommadHandler : IRequestHandler<CreateBookCommand, string>
+    using LibraryManagementCleanArchitecture.Application.Interfaces;
+    using LibraryManagementCleanArchitecture.Domain.Entities;
+    using MediatR;
+
+    public class CreateBookCommadHandler : IRequestHandler<CreateBookCommand, Result<string>>
     {
 
         private readonly IRepository<Book> bookRepository;
@@ -16,7 +16,7 @@ namespace LibraryManagementCleanArchitecture.Application.UseCases.Books.Commands
             this.unitOfWork = unitOfWork;
         }
 
-        public async Task<string> Handle(CreateBookCommand request, CancellationToken cancellationToken)
+        public async Task<Result<string>> Handle(CreateBookCommand request, CancellationToken cancellationToken)
         {
             var book = new Book
             {
@@ -24,13 +24,13 @@ namespace LibraryManagementCleanArchitecture.Application.UseCases.Books.Commands
                 Author = request.Author,
                 Year = request.Year,
                 Category = request.BookCategory,
-                IsAvailable = true
+                IsAvailable = true,
             };
 
             await bookRepository.AddAsync(book);
             await unitOfWork.CompleteAsync();
 
-            return book.Id;
+            return Result<string>.Success(book.Id);
 
         }
     }

@@ -1,8 +1,8 @@
-﻿using LibraryManagementCleanArchitecture.Application.DTO.PersonDTO;
-using MediatR;
-
-namespace LibraryManagementCleanArchitecture.Application.UseCases.Persons.Queries
+﻿namespace LibraryManagementCleanArchitecture.Application.UseCases.Persons.GetPersons
 {
-    public record GetPersonsQuery() : IRequest<List<PersonDto>>;
+    using LibraryManagementCleanArchitecture.Application.DTO.PersonDTO;
+    using MediatR;
+
+    public record GetPersonsQuery() : IRequest<Result<List<PersonDto>>>;
 
 }

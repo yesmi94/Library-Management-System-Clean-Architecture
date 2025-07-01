@@ -1,7 +1,7 @@
-﻿using static LibraryManagementCleanArchitecture.Domain.Enums.Enums;
-
-namespace LibraryManagementCleanArchitecture.Application.DTO.BookDTO
+﻿namespace LibraryManagementCleanArchitecture.Application.DTO.BookDTO
 {
+    using static LibraryManagementCleanArchitecture.Domain.Enums.Enums;
+
     public class AddBookDto
     {
         public string Title { get; set; }

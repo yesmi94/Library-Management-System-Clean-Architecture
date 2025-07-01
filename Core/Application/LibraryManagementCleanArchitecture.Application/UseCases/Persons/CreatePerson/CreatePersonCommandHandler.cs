@@ -1,12 +1,11 @@
-﻿using LibraryManagementCleanArchitecture.Application.Exceptions;
-using LibraryManagementCleanArchitecture.Application.Interfaces;
-using LibraryManagementCleanArchitecture.Domain.Entities;
-using MediatR;
-using static LibraryManagementCleanArchitecture.Domain.Enums.Enums;
-
-namespace LibraryManagementCleanArchitecture.Application.UseCases.Persons.CreatePerson
+﻿namespace LibraryManagementCleanArchitecture.Application.UseCases.Persons.CreatePerson
 {
-    public class CreatePersonCommandHandler : IRequestHandler<CreatePersonCommand, string>
+    using LibraryManagementCleanArchitecture.Application.Interfaces;
+    using LibraryManagementCleanArchitecture.Domain.Entities;
+    using MediatR;
+    using static LibraryManagementCleanArchitecture.Domain.Enums.Enums;
+
+    public class CreatePersonCommandHandler : IRequestHandler<CreatePersonCommand, Result<string>>
     {
         private readonly IRepository<Person> personRepository;
         private readonly IUnitOfWork unitOfWork;
@@ -17,19 +16,25 @@ namespace LibraryManagementCleanArchitecture.Application.UseCases.Persons.Create
             this.unitOfWork = unitOfWork;
         }
 
-        public async Task<string> Handle(CreatePersonCommand request, CancellationToken cancellationToken)
+        public async Task<Result<string>> Handle(CreatePersonCommand request, CancellationToken cancellationToken)
         {
-            Person person = request.Role switch
+            Result<Person> personResult = request.Role switch
             {
-                UserType.Member => new Member(request.Name),
-                UserType.MinorStaff => new MinorStaff(request.Name),
-                UserType.ManagementStaff => new ManagementStaff(request.Name),
-                _ => throw new InvalidPersonException("Invalid type of member")
+                UserType.Member => Result<Person>.Success(new Member(request.Name)),
+                UserType.MinorStaff => Result<Person>.Success(new MinorStaff(request.Name)),
+                UserType.ManagementStaff => Result<Person>.Success(new ManagementStaff(request.Name)),
+                _ => Result<Person>.Failure("Invalid type of member")
             };
+
+            if (!personResult.IsSuccess) {
+                return Result<string>.Failure(personResult.Error!);
+            }
+
+            Person person = personResult.Value!;
 
             await personRepository.AddAsync(person);
             await unitOfWork.CompleteAsync();
-            return person.Id;
+            return Result<string>.Success(person.Id);
         }
     }
 }

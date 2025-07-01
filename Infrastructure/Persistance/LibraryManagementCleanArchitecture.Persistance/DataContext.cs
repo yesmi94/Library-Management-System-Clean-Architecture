@@ -1,10 +1,10 @@
 ﻿
-using LibraryManagementCleanArchitecture.Domain.Entities;
-using LibraryManagementCleanArchitecture.Persistance.Configurations;
-using Microsoft.EntityFrameworkCore;
-
 namespace LibraryManagementCleanArchitecture.Persistance
 {
+    using LibraryManagementCleanArchitecture.Domain.Entities;
+    using LibraryManagementCleanArchitecture.Persistance.Configurations;
+    using Microsoft.EntityFrameworkCore;
+
     public class DataContext : DbContext
     {
         public DataContext(DbContextOptions<DataContext> options) : base(options)
@@ -26,9 +26,13 @@ namespace LibraryManagementCleanArchitecture.Persistance
         }
 
         public DbSet<Book> Books => Set<Book>();
+
         public DbSet<Member> Members => Set<Member>();
+
         public DbSet<MinorStaff> MinorStaff => Set<MinorStaff>();
+
         public DbSet<ManagementStaff> ManagementStaff => Set<ManagementStaff>();
+
         public DbSet<Person> People => Set<Person>();
         
 

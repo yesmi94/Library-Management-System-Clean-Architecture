@@ -1,10 +1,9 @@
-﻿
-using LibraryManagementCleanArchitecture.Application.DTO.BookDTO;
+﻿using LibraryManagementCleanArchitecture.Application.DTO.BookDTO;
 using MediatR;
 using static LibraryManagementCleanArchitecture.Domain.Enums.Enums;
 
-namespace LibraryManagementCleanArchitecture.Application.UseCases.Books.Queries
+namespace LibraryManagementCleanArchitecture.Application.UseCases.Books.GetBooks
 {
-    public record GetBooksQuery(string personId) : IRequest<List<BookDto>>;
+    public record GetBooksQuery(string personId) : IRequest<Result<List<BookDto>>>;
 
 }

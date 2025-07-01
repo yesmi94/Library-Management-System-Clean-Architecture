@@ -2,5 +2,5 @@
 
 namespace LibraryManagementCleanArchitecture.Application.UseCases.Books.DeleteBook
 {
-    public record DeleteBookCommand(string BookId) : IRequest<string>;
+    public record DeleteBookCommand(string BookId) : IRequest<Result<string>>;
 }

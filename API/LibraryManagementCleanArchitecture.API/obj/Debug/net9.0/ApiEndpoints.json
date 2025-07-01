@@ -31,7 +31,7 @@
     "Parameters": [
       {
         "Name": "command",
-        "Type": "LibraryManagementCleanArchitecture.Application.UseCases.Books.Commands.CreateBookCommand",
+        "Type": "LibraryManagementCleanArchitecture.Application.UseCases.Books.CreateBook.CreateBookCommand",
         "IsRequired": true
       }
     ],
@@ -145,7 +145,7 @@
     "Parameters": [
       {
         "Name": "command",
-        "Type": "LibraryManagementCleanArchitecture.Application.UseCases.Persons.Commands.CreatePersonCommand",
+        "Type": "LibraryManagementCleanArchitecture.Application.UseCases.Persons.CreatePerson.CreatePersonCommand",
         "IsRequired": true
       }
     ],

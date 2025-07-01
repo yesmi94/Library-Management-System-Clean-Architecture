@@ -2,5 +2,5 @@
 
 namespace LibraryManagementCleanArchitecture.Application.UseCases.Library.ReturnBook
 {
-    public record ReturnBookCommand(string bookId, string personId) : IRequest<string>;
+    public record ReturnBookCommand(string bookId, string personId) : IRequest<Result<string>>;
 }

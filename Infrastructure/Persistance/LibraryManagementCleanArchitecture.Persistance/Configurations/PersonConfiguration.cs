@@ -1,11 +1,11 @@
 ﻿
-using LibraryManagementCleanArchitecture.Domain.Entities;
-using Microsoft.EntityFrameworkCore;
-using Microsoft.EntityFrameworkCore.Metadata.Builders;
-using static LibraryManagementCleanArchitecture.Domain.Enums.Enums;
-
 namespace LibraryManagementCleanArchitecture.Persistance.Configurations
 {
+    using LibraryManagementCleanArchitecture.Domain.Entities;
+    using Microsoft.EntityFrameworkCore;
+    using Microsoft.EntityFrameworkCore.Metadata.Builders;
+    using static LibraryManagementCleanArchitecture.Domain.Enums.Enums;
+
     internal class PersonConfiguration : IEntityTypeConfiguration<Person>
     {
         public void Configure(EntityTypeBuilder<Person> builder)

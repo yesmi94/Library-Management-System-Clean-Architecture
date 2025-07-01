@@ -1,12 +1,15 @@
-﻿using LibraryManagementCleanArchitecture.API.Extensions;
-using LibraryManagementCleanArchitecture.Application.UseCases.Books.Commands;
-using LibraryManagementCleanArchitecture.Application.UseCases.Books.Queries;
-using MediatR;
-using Microsoft.AspNetCore.Mvc;
-using Serilog;
-
-namespace LibraryManagementCleanArchitecture.API.Endpoints
+﻿namespace LibraryManagementCleanArchitecture.API.Endpoints
 {
+    using LibraryManagementCleanArchitecture.API.Extensions;
+    using LibraryManagementCleanArchitecture.Application;
+    using LibraryManagementCleanArchitecture.Application.DTO.BookDTO;
+    using LibraryManagementCleanArchitecture.Application.UseCases.Books.CreateBook;
+    using LibraryManagementCleanArchitecture.Application.UseCases.Books.DeleteBook;
+    using LibraryManagementCleanArchitecture.Application.UseCases.Books.GetBooks;
+    using MediatR;
+    using Microsoft.AspNetCore.Mvc;
+    using Serilog;
+
     public class BookEndpoints : IEndpointGroup
     {
         public void MapEndpoints(IEndpointRouteBuilder app)
@@ -15,48 +18,51 @@ namespace LibraryManagementCleanArchitecture.API.Endpoints
 
             group.MapGet("/", async (IMediator mediator, string memberId) =>
             {
-                try
+
+                var query = new GetBooksQuery(memberId);
+                var result = await mediator.Send(query);
+                if (!result.IsSuccess)
                 {
-                    var query = new GetBooksQuery(memberId);
-                    var books = await mediator.Send(query);
-                    return Results.Ok(books);
+                    var response = Response<string>.FailureResponse(new() { result.Error! }, "Couldn't retrieve books");
+                    return Results.BadRequest(response);
                 }
-                catch (Exception exception)
-                {
-                    Log.Error(exception, exception.Message);
-                    return Results.BadRequest(exception.Message);
-                }
+
+                var successResponse = Response<List<BookDto>>.SuccessResponse(result.Value, "Books retrieved successfully");
+                Log.Information("Books retrieved successfully", result);
+                return Results.Ok(successResponse);
             });
 
             group.MapPost("/", async (IMediator mediator, [FromBody] CreateBookCommand command) =>
             {
-                try
+
+                var result = await mediator.Send(command);
+
+                if (!result.IsSuccess)
                 {
-                    var bookId = await mediator.Send(command);
-                    Log.Information("Book - {bookId} added successfully", bookId);
-                    return Results.Ok($"Book - {bookId} added successfully");
+                    var response = Response<string>.FailureResponse(new() { result.Error! }, "Couldn't create the new book");
+                    return Results.BadRequest(response);
                 }
-                catch (Exception exception)
-                {
-                    Log.Error(exception, exception.Message);
-                    return Results.BadRequest(exception.Message);
-                }
+
+                var successResponse = Response<string>.SuccessResponse(result.Value, $"Book - {result.Value} added successfully");
+                Log.Information("Book - {bookId} added successfully", result.Value);
+                return Results.Ok(successResponse);
+
             });
 
             group.MapDelete("/{bookNumber}", async (IMediator mediator, string bookNumber) =>
             {
-                try
+                var command = new DeleteBookCommand(bookNumber);
+                var result = await mediator.Send(command);
+
+                if (!result.IsSuccess)
                 {
-                    var command = new DeleteBookCommand(bookNumber);
-                    var bookId = await mediator.Send(command);
-                    Log.Information("Book - {bookId} was deleted successfully", bookId);
-                    return Results.Ok(bookId);
+                    var response = Response<string>.FailureResponse(new() { result.Error! }, $"Couldn't delete the book with ID - {result}");
+                    return Results.BadRequest(response);
                 }
-                catch (Exception exception)
-                {
-                    Log.Error(exception, exception.Message);
-                    return Results.NotFound(exception.Message);
-                }
+
+                var successResponse = Response<string>.SuccessResponse(result.Value, $"Book - {result.Value} was deleted successfully");
+                Log.Information("Book - {bookId} was deleted successfully", result.Value);
+                return Results.Ok(successResponse);
             });
         }
     }

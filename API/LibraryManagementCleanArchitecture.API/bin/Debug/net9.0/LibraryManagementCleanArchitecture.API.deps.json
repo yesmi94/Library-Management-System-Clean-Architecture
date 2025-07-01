@@ -16,6 +16,7 @@
           "Serilog": "4.3.0",
           "Serilog.Sinks.Console": "6.0.0",
           "Serilog.Sinks.Seq": "9.0.0",
+          "StyleCop.Analyzers": "1.1.118",
           "Swashbuckle.AspNetCore": "9.0.1"
         },
         "runtime": {
@@ -857,6 +858,7 @@
           }
         }
       },
+      "StyleCop.Analyzers/1.1.118": {},
       "Swashbuckle.AspNetCore/9.0.1": {
         "dependencies": {
           "Microsoft.Extensions.ApiDescription.Server": "8.0.0",
@@ -1585,6 +1587,13 @@
       "sha512": "sha512-aNU8A0K322q7+voPNmp1/qNPH+9QK8xvM1p72sMmCG0wGlshFzmtDW9QnVSoSYCj0MgQKcMOlgooovtBhRlNHw==",
       "path": "serilog.sinks.seq/9.0.0",
       "hashPath": "serilog.sinks.seq.9.0.0.nupkg.sha512"
+    },
+    "StyleCop.Analyzers/1.1.118": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-Onx6ovGSqXSK07n/0eM3ZusiNdB6cIlJdabQhWGgJp3Vooy9AaLS/tigeybOJAobqbtggTamoWndz72JscZBvw==",
+      "path": "stylecop.analyzers/1.1.118",
+      "hashPath": "stylecop.analyzers.1.1.118.nupkg.sha512"
     },
     "Swashbuckle.AspNetCore/9.0.1": {
       "type": "package",

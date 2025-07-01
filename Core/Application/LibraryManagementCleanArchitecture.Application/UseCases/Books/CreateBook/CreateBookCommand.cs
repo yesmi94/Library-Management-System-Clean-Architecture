@@ -10,5 +10,5 @@ namespace LibraryManagementCleanArchitecture.Application.UseCases.Books.CreateBo
         string Year,
         BookCategory BookCategory
 
-    ) : IRequest<string>;
+    ) : IRequest<Result<string>>;
 }

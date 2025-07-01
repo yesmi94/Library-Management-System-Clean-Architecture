@@ -1,7 +1,7 @@
-﻿using static LibraryManagementCleanArchitecture.Domain.Enums.Enums;
-
-namespace LibraryManagementCleanArchitecture.Domain.Entities
+﻿namespace LibraryManagementCleanArchitecture.Domain.Entities
 {
+    using static LibraryManagementCleanArchitecture.Domain.Enums.Enums;
+
     public class ManagementStaff : Person
     {
         public ManagementStaff(string name) : base(name, UserType.ManagementStaff) { }

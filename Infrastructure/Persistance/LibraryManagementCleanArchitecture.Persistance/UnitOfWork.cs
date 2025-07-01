@@ -1,8 +1,8 @@
-﻿using LibraryManagementCleanArchitecture.Application.Interfaces;
-using Microsoft.EntityFrameworkCore.Storage;
-
-namespace LibraryManagementCleanArchitecture.Persistance
+﻿namespace LibraryManagementCleanArchitecture.Persistance
 {
+    using LibraryManagementCleanArchitecture.Application.Interfaces;
+    using Microsoft.EntityFrameworkCore.Storage;
+
     public class UnitOfWork : IUnitOfWork
     {
         private readonly DataContext context;

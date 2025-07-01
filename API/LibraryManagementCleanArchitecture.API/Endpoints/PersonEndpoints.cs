@@ -1,11 +1,15 @@
-﻿using LibraryManagementCleanArchitecture.API.Extensions;
-using LibraryManagementCleanArchitecture.Application.UseCases.Persons.Commands;
-using LibraryManagementCleanArchitecture.Application.UseCases.Persons.Queries;
-using MediatR;
-using Microsoft.AspNetCore.Mvc;
-using Serilog;
-namespace LibraryManagementCleanArchitecture.API.Endpoints
+﻿namespace LibraryManagementCleanArchitecture.API.Endpoints
 {
+    using LibraryManagementCleanArchitecture.API.Extensions;
+    using LibraryManagementCleanArchitecture.Application;
+    using LibraryManagementCleanArchitecture.Application.DTO.PersonDTO;
+    using LibraryManagementCleanArchitecture.Application.UseCases.Persons.CreatePerson;
+    using LibraryManagementCleanArchitecture.Application.UseCases.Persons.GetMembers;
+    using LibraryManagementCleanArchitecture.Application.UseCases.Persons.GetPersons;
+    using MediatR;
+    using Microsoft.AspNetCore.Mvc;
+    using Serilog;
+
     public class PersonEndpoints : IEndpointGroup
     {
         public void MapEndpoints(IEndpointRouteBuilder app)
@@ -14,51 +18,48 @@ namespace LibraryManagementCleanArchitecture.API.Endpoints
 
             group.MapGet("/", async (IMediator mediator) =>
             {
-                try
+                var query = new GetPersonsQuery();
+                var result = await mediator.Send(query);
+                if (!result.IsSuccess)
                 {
-                    var query = new GetPersonsQuery();
-                    var persons = await mediator.Send(query);
-                    Log.Information("Succuessfully retrieved the persons list");
-                    return Results.Ok(persons);
+                    var response = Response<string>.FailureResponse(new() { result.Error! }, "Couldn't retrieve persons");
+                    return Results.BadRequest(response);
                 }
-                catch (Exception exception)
-                {
-                    Log.Error(exception, exception.Message);
-                    return Results.BadRequest(exception.Message);
-                }
+
+                var successResponse = Response<List<PersonDto>>.SuccessResponse(result.Value, "Succuessfully retrieved the persons list");
+                Log.Information("Succuessfully retrieved the persons list");
+                return Results.Ok(successResponse);
             });
 
 
             group.MapGet("/members", async (IMediator mediator) =>
             {
-                try
+                var query = new GetMembersQuery();
+                var result = await mediator.Send(query);
+                if (!result.IsSuccess)
                 {
-                    var query = new GetMembersQuery();
-                    var members = await mediator.Send(query);
-                    Log.Information("Succuessfully retrieved the members list");
-                    return Results.Ok(members);
+                    var response = Response<string>.FailureResponse(new() { result.Error! }, "Couldn't retrieve members");
+                    return Results.BadRequest(response);
                 }
-                catch (Exception exception)
-                {
-                    Log.Error(exception, exception.Message);
-                    return Results.BadRequest(exception.Message);
-                }
+
+                var successResponse = Response<List<PersonDto>>.SuccessResponse(result.Value, "Succuessfully retrieved the members list");
+                Log.Information("Succuessfully retrieved the members list");
+                return Results.Ok(successResponse);
             });
 
-            
             group.MapPost("/", async (IMediator mediator, [FromBody] CreatePersonCommand command) =>
             {
-                try
+                var result = await mediator.Send(command);
+                if (!result.IsSuccess)
                 {
-                    var personId = await mediator.Send(command);
-                    Log.Information("Person - {personId} was added successfully", personId);
-                    return Results.Ok($"Person - {personId} was added successfully");
+                    var response = Response<string>.FailureResponse(new() { result.Error! }, "Couldn't retrieve members");
+                    return Results.BadRequest(response);
                 }
-                catch (Exception exception)
-                {
-                    Log.Error(exception, exception.Message);
-                    return Results.BadRequest(exception.Message);
-                }
+
+                var successResponse = Response<string>.SuccessResponse(result.Value, $"Person - {result.Value} was added successfully");
+                Log.Information("Person - {personId} was added successfully", result.Value);
+                return Results.Ok(successResponse);
+
             });
         }
     }

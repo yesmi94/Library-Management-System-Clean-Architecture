@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("LibraryManagementCleanArchitecture.API")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+620ce194f3c86d4dd8c4a9c550bd76d9949a676b")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+7870642901e4cb04857568b9aa1ad292a95bad1f")]
 [assembly: System.Reflection.AssemblyProductAttribute("LibraryManagementCleanArchitecture.API")]
 [assembly: System.Reflection.AssemblyTitleAttribute("LibraryManagementCleanArchitecture.API")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

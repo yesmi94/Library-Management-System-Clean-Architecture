@@ -1,6 +1,6 @@
-﻿using MediatR;
-
-namespace LibraryManagementCleanArchitecture.Application.UseCases.Library.Commands
+﻿namespace LibraryManagementCleanArchitecture.Application.UseCases.Library.BorrowBook
 {
-    public record BorrowBookCommand(string bookId, string personId) : IRequest<string>;
+    using MediatR;
+
+    public record BorrowBookCommand(string bookId, string personId) : IRequest<Result<string>>;
 }

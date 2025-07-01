@@ -1,7 +1,7 @@
-﻿using static LibraryManagementCleanArchitecture.Domain.Enums.Enums;
-
-namespace LibraryManagementCleanArchitecture.Domain.Entities
+﻿namespace LibraryManagementCleanArchitecture.Domain.Entities
 {
+    using static LibraryManagementCleanArchitecture.Domain.Enums.Enums;
+
     public class MinorStaff : Person
     {
         public MinorStaff(string name) : base(name, UserType.MinorStaff) { }

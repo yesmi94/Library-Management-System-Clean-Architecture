@@ -1,9 +1,8 @@
-﻿using LibraryManagementCleanArchitecture.Application.Interfaces;
-using Microsoft.EntityFrameworkCore;
-using System.Linq.Expressions;
-
-namespace LibraryManagementCleanArchitecture.Persistance
+﻿namespace LibraryManagementCleanArchitecture.Persistance
 {
+    using System.Linq.Expressions;
+    using LibraryManagementCleanArchitecture.Application.Interfaces;
+    using Microsoft.EntityFrameworkCore;
 
     public class Repository<T> : IRepository<T> where T : class
     {
