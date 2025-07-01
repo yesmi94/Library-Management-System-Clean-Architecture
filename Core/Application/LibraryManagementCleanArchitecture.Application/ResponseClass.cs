@@ -12,9 +12,6 @@
 
         public static Response<T> SuccessResponse(T data, string? message = null) => new () { Success = true, Data = data, Message = message };
 
-        public static Response<T> FailureResponse(List<string> errors, string? message = null) => new() { Success = false, Errors = errors, Message = message };
-
-
-
+        public static Response<T> FailureResponse(List<string> errors, string? message = null) => new () { Success = false, Errors = errors, Message = message };
     }
 }

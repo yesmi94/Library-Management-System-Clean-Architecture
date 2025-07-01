@@ -1,10 +1,13 @@
 {
   "version": 2,
-  "dgSpecHash": "FTkh7bSiMwc=",
+  "dgSpecHash": "+GMnwaokQnA=",
   "success": true,
   "projectFilePath": "C:\\Users\\YesmiLiyanage\\Desktop\\LibraryManagementCleanArchitecture\\Core\\Application\\LibraryManagementCleanArchitecture.Application\\LibraryManagementCleanArchitecture.Application.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\YesmiLiyanage\\.nuget\\packages\\automapper\\14.0.0\\automapper.14.0.0.nupkg.sha512",
+    "C:\\Users\\YesmiLiyanage\\.nuget\\packages\\fluentvalidation\\12.0.0\\fluentvalidation.12.0.0.nupkg.sha512",
+    "C:\\Users\\YesmiLiyanage\\.nuget\\packages\\fluentvalidation.aspnetcore\\11.3.1\\fluentvalidation.aspnetcore.11.3.1.nupkg.sha512",
+    "C:\\Users\\YesmiLiyanage\\.nuget\\packages\\fluentvalidation.dependencyinjectionextensions\\11.11.0\\fluentvalidation.dependencyinjectionextensions.11.11.0.nupkg.sha512",
     "C:\\Users\\YesmiLiyanage\\.nuget\\packages\\mediatr\\12.5.0\\mediatr.12.5.0.nupkg.sha512",
     "C:\\Users\\YesmiLiyanage\\.nuget\\packages\\mediatr.contracts\\2.0.1\\mediatr.contracts.2.0.1.nupkg.sha512",
     "C:\\Users\\YesmiLiyanage\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\8.0.0\\microsoft.extensions.dependencyinjection.abstractions.8.0.0.nupkg.sha512",

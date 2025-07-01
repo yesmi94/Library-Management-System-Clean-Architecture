@@ -6,7 +6,6 @@
 
     public class CreateBookCommadHandler : IRequestHandler<CreateBookCommand, Result<string>>
     {
-
         private readonly IRepository<Book> bookRepository;
         private readonly IUnitOfWork unitOfWork;
 
@@ -31,8 +30,6 @@
             await unitOfWork.CompleteAsync();
 
             return Result<string>.Success(book.Id);
-
         }
     }
-
 }

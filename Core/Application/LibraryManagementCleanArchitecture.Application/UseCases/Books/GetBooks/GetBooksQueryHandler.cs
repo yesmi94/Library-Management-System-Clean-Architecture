@@ -2,7 +2,6 @@
 {
     using AutoMapper;
     using LibraryManagementCleanArchitecture.Application.DTO.BookDTO;
-    using LibraryManagementCleanArchitecture.Application.Exceptions;
     using LibraryManagementCleanArchitecture.Application.Interfaces;
     using LibraryManagementCleanArchitecture.Domain.Entities;
     using MediatR;

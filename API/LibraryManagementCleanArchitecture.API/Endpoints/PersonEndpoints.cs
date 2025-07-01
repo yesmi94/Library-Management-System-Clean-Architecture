@@ -1,5 +1,6 @@
 ﻿namespace LibraryManagementCleanArchitecture.API.Endpoints
 {
+    using FluentValidation;
     using LibraryManagementCleanArchitecture.API.Extensions;
     using LibraryManagementCleanArchitecture.Application;
     using LibraryManagementCleanArchitecture.Application.DTO.PersonDTO;
@@ -22,7 +23,7 @@
                 var result = await mediator.Send(query);
                 if (!result.IsSuccess)
                 {
-                    var response = Response<string>.FailureResponse(new() { result.Error! }, "Couldn't retrieve persons");
+                    var response = Response<string>.FailureResponse([result.Error!], "Couldn't retrieve persons");
                     return Results.BadRequest(response);
                 }
 
@@ -31,14 +32,13 @@
                 return Results.Ok(successResponse);
             });
 
-
             group.MapGet("/members", async (IMediator mediator) =>
             {
                 var query = new GetMembersQuery();
                 var result = await mediator.Send(query);
                 if (!result.IsSuccess)
                 {
-                    var response = Response<string>.FailureResponse(new() { result.Error! }, "Couldn't retrieve members");
+                    var response = Response<string>.FailureResponse([result.Error!], "Couldn't retrieve members");
                     return Results.BadRequest(response);
                 }
 
@@ -47,19 +47,27 @@
                 return Results.Ok(successResponse);
             });
 
-            group.MapPost("/", async (IMediator mediator, [FromBody] CreatePersonCommand command) =>
+            group.MapPost("/", async (IMediator mediator, [FromBody] CreatePersonCommand command, IValidator<CreatePersonCommand> validator) =>
             {
+
+                var validationResult = await validator.ValidateAsync(command);
+
+                if (!validationResult.IsValid)
+                {
+                    var error = validationResult.Errors.Select(err => err.ErrorMessage);
+                    return Results.BadRequest(error); 
+                }
+
                 var result = await mediator.Send(command);
                 if (!result.IsSuccess)
                 {
-                    var response = Response<string>.FailureResponse(new() { result.Error! }, "Couldn't retrieve members");
+                    var response = Response<string>.FailureResponse([result.Error!], "Couldn't retrieve members");
                     return Results.BadRequest(response);
                 }
 
                 var successResponse = Response<string>.SuccessResponse(result.Value, $"Person - {result.Value} was added successfully");
                 Log.Information("Person - {personId} was added successfully", result.Value);
                 return Results.Ok(successResponse);
-
             });
         }
     }

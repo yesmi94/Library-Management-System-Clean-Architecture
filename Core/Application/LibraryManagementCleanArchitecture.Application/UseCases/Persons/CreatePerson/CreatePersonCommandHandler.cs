@@ -26,7 +26,8 @@
                 _ => Result<Person>.Failure("Invalid type of member")
             };
 
-            if (!personResult.IsSuccess) {
+            if (!personResult.IsSuccess)
+            {
                 return Result<string>.Failure(personResult.Error!);
             }
 

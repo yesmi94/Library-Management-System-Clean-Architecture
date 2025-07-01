@@ -26,6 +26,7 @@
   <ItemGroup>
     <ProjectReference Include="..\..\Core\Application\LibraryManagementCleanArchitecture.Application\LibraryManagementCleanArchitecture.Application.csproj" />
     <ProjectReference Include="..\..\Infrastructure\Persistance\LibraryManagementCleanArchitecture.Persistance\LibraryManagementCleanArchitecture.Persistance.csproj" />
+    <ProjectReference Include="..\..\Infrastructure\Utils\LibraryManagementCleanArchitecture.Utils\LibraryManagementCleanArchitecture.Utils.csproj" />
   </ItemGroup>
 
 </Project>

@@ -1,10 +1,13 @@
 
 namespace LibraryManagementCleanArchitecture.API
 {
+    using FluentValidation;
     using LibraryManagementCleanArchitecture.API.Extensions;
     using LibraryManagementCleanArchitecture.Application;
     using LibraryManagementCleanArchitecture.Application.Interfaces;
+    using LibraryManagementCleanArchitecture.Application.UseCases.Books.CreateBook;
     using LibraryManagementCleanArchitecture.Persistance;
+    using LibraryManagementCleanArchitecture.Utils;
     using Microsoft.EntityFrameworkCore;
     using Serilog;
 
@@ -24,6 +27,8 @@ namespace LibraryManagementCleanArchitecture.API
             builder.Services.AddMediatR(cfg =>
                 cfg.RegisterServicesFromAssembly(typeof(AssemblyReference).Assembly));
 
+            builder.Services.AddValidatorsFromAssemblyContaining<CreateBookValidator>();
+
 
             builder.Services.AddScoped(typeof(IRepository<>), typeof(Repository<>));
             builder.Services.AddAutoMapper(typeof(AssemblyReference).Assembly);
@@ -36,11 +41,7 @@ namespace LibraryManagementCleanArchitecture.API
                 sqlOptions => sqlOptions.MigrationsAssembly("LibraryManagementSystemEFCore.Infrastructure"))
             );
 
-            Log.Logger = new LoggerConfiguration()
-                .MinimumLevel.Debug()
-                .WriteTo.Console()
-                .WriteTo.Seq("http://localhost:5341")
-                .CreateLogger();
+            SerilogConfiguration.ConfigureSerilog(builder.Host, builder.Configuration);
 
 
             var app = builder.Build();

@@ -33,6 +33,11 @@
                 return Result<string>.Failure($"Failed: Couldn't find the person with ID - {request.personId}. Please check the ID and try again");
             }
 
+            if (!book.IsAvailable)
+            {
+                return Result<string>.Failure("Book is currently unavailable");
+            }
+
             if (person.Role != UserType.Member)
             {
                 return Result<string>.Failure("Only the members are allowed to borrow books. Minor staff and the Management staff cannot borrow books");
@@ -44,7 +49,6 @@
             await bookRepository.UpdateAsync(book);
             await personRepository.UpdateAsync(person);
             await unitOfWork.CompleteAsync();
-
 
             return Result<string>.Success(book.Id);
         }

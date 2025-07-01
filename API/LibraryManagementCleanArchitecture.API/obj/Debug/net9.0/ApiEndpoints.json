@@ -69,10 +69,15 @@
     "ContainingType": "LibraryManagementCleanArchitecture.API.Endpoints.LibraryEndpoints\u002B\u003C\u003Ec",
     "Method": "\u003CMapEndpoints\u003Eb__0_0",
     "RelativePath": "api/library/{bookId}/borrowings",
-    "HttpMethod": "POST",
+    "HttpMethod": "PUT",
     "IsController": false,
     "Order": 0,
     "Parameters": [
+      {
+        "Name": "command",
+        "Type": "LibraryManagementCleanArchitecture.Application.UseCases.Library.BorrowBook.BorrowBookCommand",
+        "IsRequired": true
+      },
       {
         "Name": "bookId",
         "Type": "System.String",
@@ -96,10 +101,15 @@
     "ContainingType": "LibraryManagementCleanArchitecture.API.Endpoints.LibraryEndpoints\u002B\u003C\u003Ec",
     "Method": "\u003CMapEndpoints\u003Eb__0_1",
     "RelativePath": "api/library/{bookId}/returnings",
-    "HttpMethod": "POST",
+    "HttpMethod": "PUT",
     "IsController": false,
     "Order": 0,
     "Parameters": [
+      {
+        "Name": "command",
+        "Type": "LibraryManagementCleanArchitecture.Application.UseCases.Library.ReturnBook.ReturnBookCommand",
+        "IsRequired": true
+      },
       {
         "Name": "bookId",
         "Type": "System.String",
