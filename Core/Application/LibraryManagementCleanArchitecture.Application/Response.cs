@@ -1,4 +1,8 @@
-﻿namespace LibraryManagementCleanArchitecture.Application
+﻿// <copyright file="ResponseClass.cs" company="Ascentic">
+// Copyright (c) Ascentic. All rights reserved.
+// </copyright>
+
+namespace LibraryManagementCleanArchitecture.Application
 {
     public class Response<T>
     {

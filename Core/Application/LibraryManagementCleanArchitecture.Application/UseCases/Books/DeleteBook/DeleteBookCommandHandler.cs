@@ -1,4 +1,8 @@
-﻿namespace LibraryManagementCleanArchitecture.Application.UseCases.Books.DeleteBook
+﻿// <copyright file="DeleteBookCommandHandler.cs" company="Ascentic">
+// Copyright (c) Ascentic. All rights reserved.
+// </copyright>
+
+namespace LibraryManagementCleanArchitecture.Application.UseCases.Books.DeleteBook
 {
     using LibraryManagementCleanArchitecture.Application.Interfaces;
     using LibraryManagementCleanArchitecture.Domain.Entities;
@@ -6,7 +10,6 @@
 
     public class DeleteBookCommandHandler : IRequestHandler<DeleteBookCommand, Result<string>>
     {
-
         private readonly IRepository<Book> bookRepository;
         private readonly IUnitOfWork unitOfWork;
 
@@ -18,15 +21,15 @@
 
         public async Task<Result<string>> Handle(DeleteBookCommand request, CancellationToken cancellationToken)
         {
-            var book = await bookRepository.GetByIdAsync(request.BookId);
+            var book = await this.bookRepository.GetByIdAsync(request.bookId);
 
             if (book == null)
             {
                 return Result<string>.Failure("Failed: Trying to delete a book that does not exist. Please check the book ID and try again");
             }
 
-            await bookRepository.DeleteAsync(book);
-            await unitOfWork.CompleteAsync();
+            await this.bookRepository.DeleteAsync(book);
+            await this.unitOfWork.CompleteAsync();
 
             return Result<string>.Success(book.Id);
         }

@@ -1,4 +1,8 @@
-﻿namespace LibraryManagementCleanArchitecture.API.Endpoints
+﻿// <copyright file="PersonEndpoints.cs" company="Ascentic">
+// Copyright (c) Ascentic. All rights reserved.
+// </copyright>
+
+namespace LibraryManagementCleanArchitecture.API.Endpoints
 {
     using FluentValidation;
     using LibraryManagementCleanArchitecture.API.Extensions;
@@ -9,10 +13,16 @@
     using LibraryManagementCleanArchitecture.Application.UseCases.Persons.GetPersons;
     using MediatR;
     using Microsoft.AspNetCore.Mvc;
-    using Serilog;
 
     public class PersonEndpoints : IEndpointGroup
     {
+        private readonly ILogger<PersonEndpoints> logger;
+
+        public PersonEndpoints(ILogger<PersonEndpoints> logger)
+        {
+            this.logger = logger;
+        }
+
         public void MapEndpoints(IEndpointRouteBuilder app)
         {
             var group = app.MapGroup("api/persons");
@@ -24,11 +34,12 @@
                 if (!result.IsSuccess)
                 {
                     var response = Response<string>.FailureResponse([result.Error!], "Couldn't retrieve persons");
+                    this.logger.LogWarning("Failed: Failed to retrieve the persons list. Error: {Error}", result.Error);
                     return Results.BadRequest(response);
                 }
 
                 var successResponse = Response<List<PersonDto>>.SuccessResponse(result.Value, "Succuessfully retrieved the persons list");
-                Log.Information("Succuessfully retrieved the persons list");
+                this.logger.LogInformation("Succuessfully retrieved the persons list");
                 return Results.Ok(successResponse);
             });
 
@@ -36,37 +47,32 @@
             {
                 var query = new GetMembersQuery();
                 var result = await mediator.Send(query);
+
                 if (!result.IsSuccess)
                 {
                     var response = Response<string>.FailureResponse([result.Error!], "Couldn't retrieve members");
+                    this.logger.LogWarning("Failed: Failed to retrieve the members list. Error: {Error}", result.Error);
                     return Results.BadRequest(response);
                 }
 
                 var successResponse = Response<List<PersonDto>>.SuccessResponse(result.Value, "Succuessfully retrieved the members list");
-                Log.Information("Succuessfully retrieved the members list");
+                this.logger.LogInformation("Succuessfully retrieved the members list");
                 return Results.Ok(successResponse);
             });
 
             group.MapPost("/", async (IMediator mediator, [FromBody] CreatePersonCommand command, IValidator<CreatePersonCommand> validator) =>
             {
-
-                var validationResult = await validator.ValidateAsync(command);
-
-                if (!validationResult.IsValid)
-                {
-                    var error = validationResult.Errors.Select(err => err.ErrorMessage);
-                    return Results.BadRequest(error); 
-                }
-
                 var result = await mediator.Send(command);
+
                 if (!result.IsSuccess)
                 {
                     var response = Response<string>.FailureResponse([result.Error!], "Couldn't retrieve members");
+                    this.logger.LogWarning("Failed: Failed to create the new member. Error: {Error}", result.Error);
                     return Results.BadRequest(response);
                 }
 
                 var successResponse = Response<string>.SuccessResponse(result.Value, $"Person - {result.Value} was added successfully");
-                Log.Information("Person - {personId} was added successfully", result.Value);
+                this.logger.LogInformation("Person - {personId} was added successfully", result.Value);
                 return Results.Ok(successResponse);
             });
         }

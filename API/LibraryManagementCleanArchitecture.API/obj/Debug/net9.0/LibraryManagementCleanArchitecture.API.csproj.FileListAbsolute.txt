@@ -194,4 +194,4 @@ C:\Users\YesmiLiyanage\Desktop\LibraryManagementCleanArchitecture\API\LibraryMan
 C:\Users\YesmiLiyanage\Desktop\LibraryManagementCleanArchitecture\API\LibraryManagementCleanArchitecture.API\bin\Debug\net9.0\Serilog.Sinks.Debug.dll
 C:\Users\YesmiLiyanage\Desktop\LibraryManagementCleanArchitecture\API\LibraryManagementCleanArchitecture.API\bin\Debug\net9.0\LibraryManagementCleanArchitecture.Utils.dll
 C:\Users\YesmiLiyanage\Desktop\LibraryManagementCleanArchitecture\API\LibraryManagementCleanArchitecture.API\bin\Debug\net9.0\LibraryManagementCleanArchitecture.Utils.pdb
-C:\Users\YesmiLiyanage\Desktop\LibraryManagementCleanArchitecture\API\LibraryManagementCleanArchitecture.API\bin\Debug\net9.0\stylecop (1).json
+C:\Users\YesmiLiyanage\Desktop\LibraryManagementCleanArchitecture\API\LibraryManagementCleanArchitecture.API\bin\Debug\net9.0\stylecop.json

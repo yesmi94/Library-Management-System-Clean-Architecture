@@ -1,4 +1,8 @@
-﻿namespace LibraryManagementCleanArchitecture.Application.UseCases.Books.CreateBook
+﻿// <copyright file="CreateBookCommadHandler.cs" company="Ascentic">
+// Copyright (c) Ascentic. All rights reserved.
+// </copyright>
+
+namespace LibraryManagementCleanArchitecture.Application.UseCases.Books.CreateBook
 {
     using LibraryManagementCleanArchitecture.Application.Interfaces;
     using LibraryManagementCleanArchitecture.Domain.Entities;
@@ -19,15 +23,15 @@
         {
             var book = new Book
             {
-                Title = request.Title,
-                Author = request.Author,
-                Year = request.Year,
-                Category = request.BookCategory,
+                Title = request.title,
+                Author = request.author,
+                Year = request.year,
+                Category = request.bookCategory,
                 IsAvailable = true,
             };
 
-            await bookRepository.AddAsync(book);
-            await unitOfWork.CompleteAsync();
+            await this.bookRepository.AddAsync(book);
+            await this.unitOfWork.CompleteAsync();
 
             return Result<string>.Success(book.Id);
         }

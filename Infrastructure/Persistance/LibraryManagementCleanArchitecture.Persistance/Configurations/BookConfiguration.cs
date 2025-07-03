@@ -1,4 +1,8 @@
-﻿namespace LibraryManagementCleanArchitecture.Persistance.Configurations
+﻿// <copyright file="BookConfiguration.cs" company="PlaceholderCompany">
+// Copyright (c) PlaceholderCompany. All rights reserved.
+// </copyright>
+
+namespace LibraryManagementCleanArchitecture.Persistance.Configurations
 {
     using LibraryManagementCleanArchitecture.Domain.Entities;
     using Microsoft.EntityFrameworkCore;

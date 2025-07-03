@@ -1,12 +1,14 @@
-﻿namespace LibraryManagementCleanArchitecture.Application.UseCases.Persons.CreatePerson
-{
+﻿// <copyright file="CreatePersonCommand.cs" company="Ascentic">
+// Copyright (c) Ascentic. All rights reserved.
+// </copyright>
 
+namespace LibraryManagementCleanArchitecture.Application.UseCases.Persons.CreatePerson
+{
     using MediatR;
     using static LibraryManagementCleanArchitecture.Domain.Enums.Enums;
 
     public record CreatePersonCommand(
-        string Name,
-        UserType Role,
-        int BorrowedBooksNum
-        ) : IRequest<Result<string>>;
+        string name,
+        UserType role,
+        int borrowedBooksNum): IRequest<Result<string>>;
 }

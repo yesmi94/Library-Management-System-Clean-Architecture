@@ -1,4 +1,8 @@
-﻿namespace LibraryManagementCleanArchitecture.Application.DTO.BookDTO
+﻿// <copyright file="BookDto.cs" company="Ascentic">
+// Copyright (c) Ascentic. All rights reserved.
+// </copyright>
+
+namespace LibraryManagementCleanArchitecture.Application.DTO.BookDTO
 {
     using static LibraryManagementCleanArchitecture.Domain.Enums.Enums;
 

@@ -1,4 +1,8 @@
-﻿namespace LibraryManagementCleanArchitecture.Application.UseCases.Library.BorrowBook
+﻿// <copyright file="BorrowBookValidator.cs" company="Ascentic">
+// Copyright (c) Ascentic. All rights reserved.
+// </copyright>
+
+namespace LibraryManagementCleanArchitecture.Application.UseCases.Library.BorrowBook
 {
     using FluentValidation;
 
@@ -6,10 +10,10 @@
     {
         public BorrowBookValidator()
         {
-            RuleFor(book => book.bookId)
+            this.RuleFor(book => book.bookId)
                 .NotNull()
                 .Must(id => Guid.TryParse(id, out _)).WithMessage("Book ID must be a valid Guid");
-            RuleFor(book => book.personId)
+            this.RuleFor(book => book.personId)
                 .NotNull()
                 .Must(id => Guid.TryParse(id, out _)).WithMessage("Person ID must be a valid Guid");
         }

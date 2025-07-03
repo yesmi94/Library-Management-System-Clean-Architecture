@@ -1,4 +1,8 @@
-﻿namespace LibraryManagementCleanArchitecture.Application.UseCases.Library.ReturnBook
+﻿// <copyright file="ReturnBookCommandHandler.cs" company="Ascentic">
+// Copyright (c) Ascentic. All rights reserved.
+// </copyright>
+
+namespace LibraryManagementCleanArchitecture.Application.UseCases.Library.ReturnBook
 {
     using LibraryManagementCleanArchitecture.Application.Exceptions;
     using LibraryManagementCleanArchitecture.Application.Interfaces;
@@ -21,8 +25,8 @@
 
         public async Task<Result<string>> Handle(ReturnBookCommand request, CancellationToken cancellationToken)
         {
-            var book = await bookRepository.GetByIdAsync(request.bookId);
-            var person = await personRepository.GetByIdAsync(request.personId);
+            var book = await this.bookRepository.GetByIdAsync(request.bookId);
+            var person = await this.personRepository.GetByIdAsync(request.personId);
 
             if (book == null)
             {
@@ -42,12 +46,11 @@
             book.IsAvailable = true;
             person.BorrowedBooksNum--;
 
-            await bookRepository.UpdateAsync(book);
-            await personRepository.UpdateAsync(person);
-            await unitOfWork.CompleteAsync();
+            await this.bookRepository.UpdateAsync(book);
+            await this.personRepository.UpdateAsync(person);
+            await this.unitOfWork.CompleteAsync();
 
             return Result<string>.Success(book.Id);
-
         }
     }
 }

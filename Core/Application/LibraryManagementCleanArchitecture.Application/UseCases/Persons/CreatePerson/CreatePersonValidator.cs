@@ -1,4 +1,7 @@
-﻿
+﻿// <copyright file="CreatePersonValidator.cs" company="Ascentic">
+// Copyright (c) Ascentic. All rights reserved.
+// </copyright>
+
 namespace LibraryManagementCleanArchitecture.Application.UseCases.Persons.CreatePerson
 {
     using FluentValidation;
@@ -7,13 +10,13 @@ namespace LibraryManagementCleanArchitecture.Application.UseCases.Persons.Create
     {
         public CreatePersonValidator()
         {
-            RuleFor(person => person.Name)
+            this.RuleFor(person => person.name)
                 .NotEmpty().WithMessage("Name of the person is required")
                 .MaximumLength(100).WithMessage("Name of the person cannot exceed 100 characters");
-            RuleFor(person => person.Role)
+            this.RuleFor(person => person.role)
                 .NotNull().WithMessage("Role of the person cannot be empty")
                 .IsInEnum();
-            RuleFor(person => person.BorrowedBooksNum)
+            this.RuleFor(person => person.borrowedBooksNum)
                 .NotNull().WithMessage("Number of the borrowed books is required");
         }
     }

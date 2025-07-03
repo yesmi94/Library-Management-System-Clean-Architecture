@@ -1,4 +1,8 @@
-﻿namespace LibraryManagementCleanArchitecture.Domain.Enums
+﻿// <copyright file="Enums.cs" company="PlaceholderCompany">
+// Copyright (c) PlaceholderCompany. All rights reserved.
+// </copyright>
+
+namespace LibraryManagementCleanArchitecture.Domain.Enums
 {
     public class Enums
     {
@@ -6,14 +10,14 @@
         {
             Member,
             ManagementStaff,
-            MinorStaff
+            MinorStaff,
         }
 
         public enum BookCategory
         {
             History,
             Fiction,
-            Child
+            Child,
         }
     }
 }

@@ -1,4 +1,8 @@
-﻿namespace LibraryManagementCleanArchitecture.Application.UseCases.Library.BorrowBook
+﻿// <copyright file="BorrowBookCommandHandler.cs" company="Ascentic">
+// Copyright (c) Ascentic. All rights reserved.
+// </copyright>
+
+namespace LibraryManagementCleanArchitecture.Application.UseCases.Library.BorrowBook
 {
     using LibraryManagementCleanArchitecture.Application.Interfaces;
     using LibraryManagementCleanArchitecture.Domain.Entities;
@@ -20,8 +24,8 @@
 
         public async Task<Result<string>> Handle(BorrowBookCommand request, CancellationToken cancellationToken)
         {
-            var book = await bookRepository.GetByIdAsync(request.bookId);
-            var person = await personRepository.GetByIdAsync(request.personId);
+            var book = await this.bookRepository.GetByIdAsync(request.bookId);
+            var person = await this.personRepository.GetByIdAsync(request.personId);
 
             if (book == null)
             {
@@ -46,9 +50,8 @@
             book.IsAvailable = false;
             person.BorrowedBooksNum++;
 
-            await bookRepository.UpdateAsync(book);
-            await personRepository.UpdateAsync(person);
-            await unitOfWork.CompleteAsync();
+            await this.bookRepository.UpdateAsync(book);
+            await this.unitOfWork.CompleteAsync();
 
             return Result<string>.Success(book.Id);
         }

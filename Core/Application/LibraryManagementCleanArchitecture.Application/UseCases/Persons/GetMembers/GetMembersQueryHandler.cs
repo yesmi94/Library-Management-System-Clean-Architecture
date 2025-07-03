@@ -1,4 +1,8 @@
-﻿namespace LibraryManagementCleanArchitecture.Application.UseCases.Persons.GetMembers
+﻿// <copyright file="GetMembersQueryHandler.cs" company="Ascentic">
+// Copyright (c) Ascentic. All rights reserved.
+// </copyright>
+
+namespace LibraryManagementCleanArchitecture.Application.UseCases.Persons.GetMembers
 {
     using AutoMapper;
     using LibraryManagementCleanArchitecture.Application.DTO.PersonDTO;
@@ -20,7 +24,7 @@
 
         public async Task<Result<List<PersonDto>>> Handle(GetMembersQuery request, CancellationToken cancellationToken)
         {
-            var persons = await personRepository.GetAllAsync();
+            var persons = await this.personRepository.GetAllAsync();
 
             var members = new List<PersonDto>();
 
@@ -29,10 +33,11 @@
                 return Result<List<PersonDto>>.Failure("No people to display");
             }
 
-            var personList = mapper.Map<List<PersonDto>>(persons);
+            var personList = this.mapper.Map<List<PersonDto>>(persons);
 
-            foreach (var personDto in personList) { 
-                if(personDto.Role == UserType.Member)
+            foreach (var personDto in personList)
+            {
+                if (personDto.Role == UserType.Member)
                 {
                     members.Add(personDto);
                 }

@@ -14,3 +14,4 @@ C:\Users\YesmiLiyanage\Desktop\LibraryManagementCleanArchitecture\Core\Applicati
 C:\Users\YesmiLiyanage\Desktop\LibraryManagementCleanArchitecture\Core\Application\LibraryManagementCleanArchitecture.Application\obj\Debug\net9.0\refint\LibraryManagementCleanArchitecture.Application.dll
 C:\Users\YesmiLiyanage\Desktop\LibraryManagementCleanArchitecture\Core\Application\LibraryManagementCleanArchitecture.Application\obj\Debug\net9.0\LibraryManagementCleanArchitecture.Application.pdb
 C:\Users\YesmiLiyanage\Desktop\LibraryManagementCleanArchitecture\Core\Application\LibraryManagementCleanArchitecture.Application\obj\Debug\net9.0\ref\LibraryManagementCleanArchitecture.Application.dll
+C:\Users\YesmiLiyanage\Desktop\LibraryManagementCleanArchitecture\Core\Application\LibraryManagementCleanArchitecture.Application\bin\Debug\net9.0\stylecop.json

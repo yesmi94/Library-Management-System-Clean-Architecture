@@ -1,4 +1,8 @@
-﻿namespace LibraryManagementCleanArchitecture.Utils
+﻿// <copyright file="SerilogConfiguration.cs" company="PlaceholderCompany">
+// Copyright (c) PlaceholderCompany. All rights reserved.
+// </copyright>
+
+namespace LibraryManagementCleanArchitecture.Utils
 {
     using Microsoft.Extensions.Configuration;
     using Microsoft.Extensions.Hosting;

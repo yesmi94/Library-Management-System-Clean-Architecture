@@ -1,4 +1,7 @@
-﻿
+﻿// <copyright file="DataContext.cs" company="PlaceholderCompany">
+// Copyright (c) PlaceholderCompany. All rights reserved.
+// </copyright>
+
 namespace LibraryManagementCleanArchitecture.Persistance
 {
     using LibraryManagementCleanArchitecture.Domain.Entities;
@@ -7,9 +10,9 @@ namespace LibraryManagementCleanArchitecture.Persistance
 
     public class DataContext : DbContext
     {
-        public DataContext(DbContextOptions<DataContext> options) : base(options)
+        public DataContext(DbContextOptions<DataContext> options)
+            : base(options)
         {
-                
         }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
@@ -25,17 +28,14 @@ namespace LibraryManagementCleanArchitecture.Persistance
             modelBuilder.ApplyConfiguration(new PersonConfiguration());
         }
 
-        public DbSet<Book> Books => Set<Book>();
+        public DbSet<Book> Books => this.Set<Book>();
 
-        public DbSet<Member> Members => Set<Member>();
+        public DbSet<Member> Members => this.Set<Member>();
 
-        public DbSet<MinorStaff> MinorStaff => Set<MinorStaff>();
+        public DbSet<MinorStaff> MinorStaff => this.Set<MinorStaff>();
 
-        public DbSet<ManagementStaff> ManagementStaff => Set<ManagementStaff>();
+        public DbSet<ManagementStaff> ManagementStaff => this.Set<ManagementStaff>();
 
-        public DbSet<Person> People => Set<Person>();
-        
-
-
+        public DbSet<Person> People => this.Set<Person>();
     }
 }

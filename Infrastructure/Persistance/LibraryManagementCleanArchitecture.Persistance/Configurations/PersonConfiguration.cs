@@ -1,4 +1,7 @@
-﻿
+﻿// <copyright file="PersonConfiguration.cs" company="PlaceholderCompany">
+// Copyright (c) PlaceholderCompany. All rights reserved.
+// </copyright>
+
 namespace LibraryManagementCleanArchitecture.Persistance.Configurations
 {
     using LibraryManagementCleanArchitecture.Domain.Entities;
@@ -10,14 +13,12 @@ namespace LibraryManagementCleanArchitecture.Persistance.Configurations
     {
         public void Configure(EntityTypeBuilder<Person> builder)
         {
-
             builder.ToTable("People");
 
             builder.HasDiscriminator<UserType>("Role")
                 .HasValue<Member>(UserType.Member)
                 .HasValue<MinorStaff>(UserType.MinorStaff)
                 .HasValue<ManagementStaff>(UserType.ManagementStaff);
-
 
             builder.HasKey(person => person.Id);
 
@@ -27,7 +28,6 @@ namespace LibraryManagementCleanArchitecture.Persistance.Configurations
 
             builder.Property(person => person.Role)
                 .IsRequired();
-
         }
     }
 }
