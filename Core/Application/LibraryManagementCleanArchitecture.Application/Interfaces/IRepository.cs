@@ -4,6 +4,7 @@
 
 namespace LibraryManagementCleanArchitecture.Application.Interfaces
 {
+    using LibraryManagementCleanArchitecture.Domain.Entities;
     using System.Linq.Expressions;
 
     public interface IRepository<T>
@@ -14,6 +15,8 @@ namespace LibraryManagementCleanArchitecture.Application.Interfaces
         Task<List<T>> GetAllAsync();
 
         Task<List<T>> FindAsync(Expression<Func<T, bool>> predicate);
+
+        public Task<LoginInfo?> GetByUsernameAsync(string username);
 
         Task AddAsync(T entity);
 

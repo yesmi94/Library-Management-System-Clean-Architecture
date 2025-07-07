@@ -26,9 +26,17 @@ namespace LibraryManagementCleanArchitecture.Persistance
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             modelBuilder.ApplyConfiguration(new PersonConfiguration());
+            modelBuilder.ApplyConfiguration(new LoginConfiguration());
+
+            modelBuilder.Entity<Person>()
+                .HasOne(p => p.LoginInfo)
+                .WithOne(l => l.Person)
+                .HasForeignKey<LoginInfo>(l => l.PersonId);
         }
 
         public DbSet<Book> Books => this.Set<Book>();
+
+        public DbSet<LoginInfo> Logins => this.Set<LoginInfo>();
 
         public DbSet<Member> Members => this.Set<Member>();
 

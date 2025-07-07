@@ -10,6 +10,7 @@ namespace LibraryManagementCleanArchitecture.API.Endpoints
     using LibraryManagementCleanArchitecture.Application.UseCases.Library.BorrowBook;
     using LibraryManagementCleanArchitecture.Application.UseCases.Library.ReturnBook;
     using MediatR;
+    using Microsoft.AspNetCore.Authorization;
     using Microsoft.AspNetCore.Mvc;
 
     public class LibraryEndpoints : IEndpointGroup
@@ -25,7 +26,7 @@ namespace LibraryManagementCleanArchitecture.API.Endpoints
         {
             var group = app.MapGroup("api/library");
 
-            group.MapPut("/{bookId}/borrowings", async ([FromBody] BorrowBookCommand command, IMediator mediator, [FromRoute] string bookId, [FromQuery] string personId, [FromServices] IValidator<BorrowBookCommand> validator) =>
+            group.MapPut("/{bookId}/borrowings", [Authorize(Roles = "Member")] async ([FromBody] BorrowBookCommand command, IMediator mediator, [FromRoute] string bookId, [FromQuery] string personId, [FromServices] IValidator<BorrowBookCommand> validator) =>
             {
                 command = new BorrowBookCommand(bookId, personId);
 
@@ -43,7 +44,7 @@ namespace LibraryManagementCleanArchitecture.API.Endpoints
                 return Results.Ok(successResponse);
             });
 
-            group.MapPut("/{bookId}/returnings", async ([FromBody] ReturnBookCommand command, IMediator mediator, [FromRoute] string bookId, [FromQuery] string personId, [FromServices] IValidator<ReturnBookCommand> validator) =>
+            group.MapPut("/{bookId}/returnings", [Authorize(Roles = "Member")] async ([FromBody] ReturnBookCommand command, IMediator mediator, [FromRoute] string bookId, [FromQuery] string personId, [FromServices] IValidator<ReturnBookCommand> validator) =>
             {
                 command = new ReturnBookCommand(bookId, personId);
 
@@ -58,7 +59,7 @@ namespace LibraryManagementCleanArchitecture.API.Endpoints
                 var successResponse = Response<string>.SuccessResponse(result.Value, $"Book - {bookId} returned by {personId} successfully");
                 this.logger.LogInformation("Book - {bookId} returned by {personId} successfully", bookId, personId);
                 return Results.Ok(successResponse);
-            });
+            }).RequireAuthorization(new AuthorizeAttribute { Roles = "Member" });
         }
     }
 }

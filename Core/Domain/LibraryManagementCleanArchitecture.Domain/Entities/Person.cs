@@ -1,5 +1,5 @@
-﻿// <copyright file="Person.cs" company="PlaceholderCompany">
-// Copyright (c) PlaceholderCompany. All rights reserved.
+﻿// <copyright file="Person.cs" company="Ascentic">
+// Copyright (c) Ascentic. All rights reserved.
 // </copyright>
 
 namespace LibraryManagementCleanArchitecture.Domain.Entities
@@ -23,5 +23,7 @@ namespace LibraryManagementCleanArchitecture.Domain.Entities
         }
 
         public abstract string ShowType();
+
+        public virtual LoginInfo LoginInfo { get; set; }
     }
 }

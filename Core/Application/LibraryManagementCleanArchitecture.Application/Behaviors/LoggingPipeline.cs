@@ -6,6 +6,7 @@ namespace LibraryManagementCleanArchitecture.Application.Behaviors
 {
     using LibraryManagementCleanArchitecture.Application;
     using MediatR;
+    using Microsoft.Extensions.Logging;
 
     public class LoggingPipeline<TRequest, TResponse> : IPipelineBehavior<TRequest, TResponse>
         where TRequest : IRequest<TResponse>

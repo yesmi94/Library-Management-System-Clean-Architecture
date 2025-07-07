@@ -10,5 +10,7 @@ namespace LibraryManagementCleanArchitecture.Application.UseCases.Persons.Create
     public record CreatePersonCommand(
         string name,
         UserType role,
-        int borrowedBooksNum): IRequest<Result<string>>;
+        int borrowedBooksNum,
+        string username,
+        string password) : IRequest<Result<string>>;
 }

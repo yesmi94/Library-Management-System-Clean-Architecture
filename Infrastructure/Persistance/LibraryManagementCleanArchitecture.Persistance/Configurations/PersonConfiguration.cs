@@ -4,30 +4,31 @@
 
 namespace LibraryManagementCleanArchitecture.Persistance.Configurations
 {
-    using LibraryManagementCleanArchitecture.Domain.Entities;
-    using Microsoft.EntityFrameworkCore;
-    using Microsoft.EntityFrameworkCore.Metadata.Builders;
-    using static LibraryManagementCleanArchitecture.Domain.Enums.Enums;
+	using LibraryManagementCleanArchitecture.Domain.Entities;
+	using Microsoft.EntityFrameworkCore;
+	using Microsoft.EntityFrameworkCore.Metadata.Builders;
+	using static LibraryManagementCleanArchitecture.Domain.Enums.Enums;
 
-    internal class PersonConfiguration : IEntityTypeConfiguration<Person>
-    {
-        public void Configure(EntityTypeBuilder<Person> builder)
-        {
-            builder.ToTable("People");
+	internal class PersonConfiguration : IEntityTypeConfiguration<Person>
+	{
+		public void Configure(EntityTypeBuilder<Person> builder)
+		{
+			builder.ToTable("People");
 
-            builder.HasDiscriminator<UserType>("Role")
-                .HasValue<Member>(UserType.Member)
-                .HasValue<MinorStaff>(UserType.MinorStaff)
-                .HasValue<ManagementStaff>(UserType.ManagementStaff);
+			builder.HasDiscriminator<UserType>("Role")
 
-            builder.HasKey(person => person.Id);
+				.HasValue<Member>(UserType.Member)
+				.HasValue<MinorStaff>(UserType.MinorStaff)
+				.HasValue<ManagementStaff>(UserType.ManagementStaff);
 
-            builder.Property(person => person.Name)
-                .IsRequired()
-                .HasMaxLength(100);
+			builder.HasKey(person => person.Id);
 
-            builder.Property(person => person.Role)
-                .IsRequired();
-        }
-    }
+			builder.Property(person => person.Name)
+				.IsRequired()
+				.HasMaxLength(100);
+
+			builder.Property(person => person.Role)
+				.IsRequired();
+		}
+	}
 }

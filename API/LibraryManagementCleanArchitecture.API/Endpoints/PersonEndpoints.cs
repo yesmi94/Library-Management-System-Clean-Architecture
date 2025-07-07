@@ -8,11 +8,9 @@ namespace LibraryManagementCleanArchitecture.API.Endpoints
     using LibraryManagementCleanArchitecture.API.Extensions;
     using LibraryManagementCleanArchitecture.Application;
     using LibraryManagementCleanArchitecture.Application.DTO.PersonDTO;
-    using LibraryManagementCleanArchitecture.Application.UseCases.Persons.CreatePerson;
     using LibraryManagementCleanArchitecture.Application.UseCases.Persons.GetMembers;
     using LibraryManagementCleanArchitecture.Application.UseCases.Persons.GetPersons;
     using MediatR;
-    using Microsoft.AspNetCore.Mvc;
 
     public class PersonEndpoints : IEndpointGroup
     {
@@ -57,22 +55,6 @@ namespace LibraryManagementCleanArchitecture.API.Endpoints
 
                 var successResponse = Response<List<PersonDto>>.SuccessResponse(result.Value, "Succuessfully retrieved the members list");
                 this.logger.LogInformation("Succuessfully retrieved the members list");
-                return Results.Ok(successResponse);
-            });
-
-            group.MapPost("/", async (IMediator mediator, [FromBody] CreatePersonCommand command, IValidator<CreatePersonCommand> validator) =>
-            {
-                var result = await mediator.Send(command);
-
-                if (!result.IsSuccess)
-                {
-                    var response = Response<string>.FailureResponse([result.Error!], "Couldn't retrieve members");
-                    this.logger.LogWarning("Failed: Failed to create the new member. Error: {Error}", result.Error);
-                    return Results.BadRequest(response);
-                }
-
-                var successResponse = Response<string>.SuccessResponse(result.Value, $"Person - {result.Value} was added successfully");
-                this.logger.LogInformation("Person - {personId} was added successfully", result.Value);
                 return Results.Ok(successResponse);
             });
         }

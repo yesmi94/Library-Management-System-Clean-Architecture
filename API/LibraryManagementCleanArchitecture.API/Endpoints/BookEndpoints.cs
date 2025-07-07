@@ -12,6 +12,7 @@ namespace LibraryManagementCleanArchitecture.API.Endpoints
     using LibraryManagementCleanArchitecture.Application.UseCases.Books.DeleteBook;
     using LibraryManagementCleanArchitecture.Application.UseCases.Books.GetBooks;
     using MediatR;
+    using Microsoft.AspNetCore.Authorization;
     using Microsoft.AspNetCore.Mvc;
 
     public class BookEndpoints : IEndpointGroup
@@ -27,13 +28,13 @@ namespace LibraryManagementCleanArchitecture.API.Endpoints
         {
             var group = app.MapGroup("api/books");
 
-            group.MapGet("/", async (IMediator mediator, string memberId) =>
+            group.MapGet("/", [Authorize(Roles = "Member,ManagementStaff")] async (IMediator mediator, string memberId) =>
             {
                 var query = new GetBooksQuery(memberId);
                 var result = await mediator.Send(query);
                 if (!result.IsSuccess)
                 {
-                    var response = Response<string>.FailureResponse([result.Error!], "Couldn't retrieve books");
+                    var response = Response<List<BookDto>>.FailureResponse([result.Error!], "Couldn't retrieve books");
                     this.logger.LogWarning("Failed: Failed to retrieve books for {MemberId}. Error: {Error}", memberId, result.Error);
                     return Results.BadRequest(response);
                 }
@@ -43,7 +44,7 @@ namespace LibraryManagementCleanArchitecture.API.Endpoints
                 return Results.Ok(successResponse);
             });
 
-            group.MapPost("/", async (IMediator mediator, [FromBody] CreateBookCommand command, [FromServices] IValidator<CreateBookCommand> validator) =>
+            group.MapPost("/", async (IMediator mediator, [FromBody] CreateBookCommand command) =>
             {
                 var result = await mediator.Send(command);
 
@@ -59,7 +60,7 @@ namespace LibraryManagementCleanArchitecture.API.Endpoints
                 return Results.Ok(successResponse);
             });
 
-            group.MapDelete("/{bookId}", async (IMediator mediator, string bookId, [FromServices] IValidator<DeleteBookCommand> validator) =>
+            group.MapDelete("/{bookId}", async (IMediator mediator, string bookId) =>
             {
                 var command = new DeleteBookCommand(bookId);
 

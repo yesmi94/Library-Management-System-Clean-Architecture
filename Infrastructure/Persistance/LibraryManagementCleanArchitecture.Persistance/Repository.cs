@@ -6,10 +6,12 @@ namespace LibraryManagementCleanArchitecture.Persistance
 {
     using System.Linq.Expressions;
     using LibraryManagementCleanArchitecture.Application.Interfaces;
+    using LibraryManagementCleanArchitecture.Domain.Entities;
     using Microsoft.EntityFrameworkCore;
 
     public class Repository<T> : IRepository<T>
         where T : class
+
     {
         protected readonly DataContext context;
         private readonly DbSet<T> entities;
@@ -28,6 +30,8 @@ namespace LibraryManagementCleanArchitecture.Persistance
             await this.entities.Where(predicate).ToListAsync();
 
         public async Task AddAsync(T entity) => await this.entities.AddAsync(entity);
+
+        public Task<LoginInfo?> GetByUsernameAsync(string username) => this.context.Logins.FirstOrDefaultAsync(info => info.Username == username);
 
         public Task DeleteAsync(T entity)
         {
