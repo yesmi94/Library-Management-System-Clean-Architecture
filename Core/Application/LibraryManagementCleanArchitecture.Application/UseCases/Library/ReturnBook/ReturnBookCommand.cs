@@ -4,7 +4,8 @@
 
 namespace LibraryManagementCleanArchitecture.Application.UseCases.Library.ReturnBook
 {
+    using LibraryManagementCleanArchitecture.Domain.Entities;
     using MediatR;
 
-    public record ReturnBookCommand(string bookId, string personId): IRequest<Result<string>>;
+    public record ReturnBookCommand(string bookId, string personId, string borrowingId) : IRequest<Result<Book>>;
 }

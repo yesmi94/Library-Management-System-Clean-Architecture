@@ -6,9 +6,7 @@
     using LibraryManagementCleanArchitecture.Application.UseCases.Login;
     using LibraryManagementCleanArchitecture.Application.UseCases.Persons.CreatePerson;
     using MediatR;
-    using Microsoft.AspNetCore.Authorization;
     using Microsoft.AspNetCore.Mvc;
-    using System.Security.Claims;
 
     public class AuthEndpoints : IEndpointGroup
     {
@@ -54,20 +52,6 @@
                 return Results.Ok(successResponse);
 
             });
-
-            app.MapGet("/whoami", [Authorize] (ClaimsPrincipal user) =>
-            {
-                var name = user.Identity?.Name;
-                var role = user.FindFirst(ClaimTypes.Role)?.Value;
-                return Results.Ok(new { name, role });
-            });
-
-            app.MapGet("/claims", [Authorize] (HttpContext context) =>
-            {
-                var claims = context.User.Claims.Select(c => new { c.Type, c.Value });
-                return Results.Ok(claims);
-            });
-
 
         }
     }

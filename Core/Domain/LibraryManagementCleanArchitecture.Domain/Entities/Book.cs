@@ -20,6 +20,8 @@ namespace LibraryManagementCleanArchitecture.Domain.Entities
 
         public bool IsAvailable { get; set; }
 
+        public virtual Member Member { get; set; }
+
         public Book(string id, string title, string author, string year, BookCategory category, bool isAvailable)
         {
             this.Id = id;

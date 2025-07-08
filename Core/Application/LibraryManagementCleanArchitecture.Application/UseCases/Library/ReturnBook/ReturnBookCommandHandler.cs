@@ -10,37 +10,41 @@ namespace LibraryManagementCleanArchitecture.Application.UseCases.Library.Return
     using MediatR;
     using static LibraryManagementCleanArchitecture.Domain.Enums.Enums;
 
-    public class ReturnBookCommandHandler : IRequestHandler<ReturnBookCommand, Result<string>>
+    public class ReturnBookCommandHandler : IRequestHandler<ReturnBookCommand, Result<Book>>
     {
         private readonly IRepository<Book> bookRepository;
         private readonly IRepository<Person> personRepository;
+        private readonly IRepository<Borrowing> borrowingRepository;
         private readonly IUnitOfWork unitOfWork;
 
-        public ReturnBookCommandHandler(IRepository<Book> bookRepository, IRepository<Person> personRepository, IUnitOfWork unitOfWork)
+        public ReturnBookCommandHandler(IRepository<Book> bookRepository, IRepository<Person> personRepository, IUnitOfWork unitOfWork, IRepository<Borrowing> borrowingRepository)
         {
             this.bookRepository = bookRepository;
             this.personRepository = personRepository;
+            this.borrowingRepository = borrowingRepository;
             this.unitOfWork = unitOfWork;
         }
 
-        public async Task<Result<string>> Handle(ReturnBookCommand request, CancellationToken cancellationToken)
+        public async Task<Result<Book>> Handle(ReturnBookCommand request, CancellationToken cancellationToken)
         {
+            var borrowing = await this.borrowingRepository.GetByIdAsync(request.borrowingId);
+            var bookId = await this.bookRepository.GetByIdAsync(borrowing.BookId);
             var book = await this.bookRepository.GetByIdAsync(request.bookId);
             var person = await this.personRepository.GetByIdAsync(request.personId);
 
-            if (book == null)
+            if (borrowing == null || borrowing.IsReturned)
             {
-                return Result<string>.Failure($"Failed: Book with {request.bookId} does not exist. Please check the book ID an try again");
+                return Result<Book>.Failure("Invalid borrowing record.");
             }
 
-            if (person == null)
-            {
-                return Result<string>.Failure($"Failed: Couldn't find the person with ID - {request.personId}. Please check the ID and try again");
-            }
+            borrowing.IsReturned = true;
+
+            book = borrowing.Book;
+            book.IsAvailable = true;
 
             if (person.Role != UserType.Member)
             {
-                return Result<string>.Failure("Only the members are allowed to return books");
+                return Result<Book>.Failure("Only the members are allowed to return books");
             }
 
             book.IsAvailable = true;
@@ -50,7 +54,7 @@ namespace LibraryManagementCleanArchitecture.Application.UseCases.Library.Return
             await this.personRepository.UpdateAsync(person);
             await this.unitOfWork.CompleteAsync();
 
-            return Result<string>.Success(book.Id);
+            return Result<Book>.Success(book);
         }
     }
 }

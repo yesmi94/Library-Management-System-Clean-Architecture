@@ -5,8 +5,8 @@
 namespace LibraryManagementCleanArchitecture.Persistance.Configurations
 {
 	using LibraryManagementCleanArchitecture.Domain.Entities;
-	using Microsoft.EntityFrameworkCore;
-	using Microsoft.EntityFrameworkCore.Metadata.Builders;
+    using Microsoft.EntityFrameworkCore;
+    using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
     public class BookConfiguration : IEntityTypeConfiguration<Book>
 	{
@@ -15,8 +15,8 @@ namespace LibraryManagementCleanArchitecture.Persistance.Configurations
 			builder.HasKey(book => book.Id);
 
 			builder.Property(book => book.Title)
-				.IsRequired()
-				.HasColumnType("nvarchar(450)");
+                .IsRequired()
+                .HasColumnType("nvarchar(450)");
 
 			builder.Property(builder => builder.Author)
 				.IsRequired()
@@ -28,6 +28,7 @@ namespace LibraryManagementCleanArchitecture.Persistance.Configurations
 
 			builder.Property(builder => builder.IsAvailable)
 				.IsRequired();
+
 		}
 	}
 }

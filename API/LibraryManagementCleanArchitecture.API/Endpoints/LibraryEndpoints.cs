@@ -9,6 +9,7 @@ namespace LibraryManagementCleanArchitecture.API.Endpoints
     using LibraryManagementCleanArchitecture.Application;
     using LibraryManagementCleanArchitecture.Application.UseCases.Library.BorrowBook;
     using LibraryManagementCleanArchitecture.Application.UseCases.Library.ReturnBook;
+    using LibraryManagementCleanArchitecture.Domain.Entities;
     using MediatR;
     using Microsoft.AspNetCore.Authorization;
     using Microsoft.AspNetCore.Mvc;
@@ -34,19 +35,19 @@ namespace LibraryManagementCleanArchitecture.API.Endpoints
 
                 if (!result.IsSuccess)
                 {
-                    var response = Response<string>.FailureResponse([result.Error!], "Couldn't borrow the book");
+                    var response = Response<Book>.FailureResponse([result.Error!], "Couldn't borrow the book");
                     this.logger.LogWarning("Failed - Book with ID {bookId} borrowing failed", bookId);
                     return Results.BadRequest(response);
                 }
 
-                var successResponse = Response<string>.SuccessResponse(result.Value, $"Book - {bookId} borrowed by {personId} successfully");
-                this.logger.LogInformation("Book - {bookId} borrowed by {personId} successfully", bookId, personId);
+                var successResponse = Response<Book>.SuccessResponse(result.Value, $"Book - {bookId} borrowed by {personId} successfully. Your borrowing ID is {result.Value}");
+                this.logger.LogInformation("Book - {bookId} borrowed by {personId} successfully. Borrowing ID id {Borrowing ID}", bookId, personId, result.Value);
                 return Results.Ok(successResponse);
             });
 
-            group.MapPut("/{bookId}/returnings", [Authorize(Roles = "Member")] async ([FromBody] ReturnBookCommand command, IMediator mediator, [FromRoute] string bookId, [FromQuery] string personId, [FromServices] IValidator<ReturnBookCommand> validator) =>
+            group.MapPut("/{borrowingId}/returnings", [Authorize(Roles = "Member")] async ([FromBody] ReturnBookCommand command, IMediator mediator, [FromRoute] string borrowingId, [FromQuery] string personId, [FromQuery] string bookId, [FromServices] IValidator<ReturnBookCommand> validator) =>
             {
-                command = new ReturnBookCommand(bookId, personId);
+                command = new ReturnBookCommand(bookId, personId, borrowingId);
 
                 var result = await mediator.Send(command);
                 if (!result.IsSuccess)
@@ -56,10 +57,10 @@ namespace LibraryManagementCleanArchitecture.API.Endpoints
                     return Results.BadRequest(response);
                 }
 
-                var successResponse = Response<string>.SuccessResponse(result.Value, $"Book - {bookId} returned by {personId} successfully");
+                var successResponse = Response<Book>.SuccessResponse(result.Value, $"Book - {bookId} returned by {personId} successfully");
                 this.logger.LogInformation("Book - {bookId} returned by {personId} successfully", bookId, personId);
                 return Results.Ok(successResponse);
-            }).RequireAuthorization(new AuthorizeAttribute { Roles = "Member" });
+            });
         }
     }
 }

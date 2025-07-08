@@ -27,11 +27,8 @@ namespace LibraryManagementCleanArchitecture.Persistance
         {
             modelBuilder.ApplyConfiguration(new PersonConfiguration());
             modelBuilder.ApplyConfiguration(new LoginConfiguration());
+            modelBuilder.ApplyConfiguration(new BorrowingConfiguration());
 
-            modelBuilder.Entity<Person>()
-                .HasOne(p => p.LoginInfo)
-                .WithOne(l => l.Person)
-                .HasForeignKey<LoginInfo>(l => l.PersonId);
         }
 
         public DbSet<Book> Books => this.Set<Book>();
@@ -45,5 +42,7 @@ namespace LibraryManagementCleanArchitecture.Persistance
         public DbSet<ManagementStaff> ManagementStaff => this.Set<ManagementStaff>();
 
         public DbSet<Person> People => this.Set<Person>();
+
+        public DbSet<Borrowing> Borrowing => this.Set<Borrowing>();
     }
 }
