@@ -1,13 +1,19 @@
-﻿using static LibraryManagementCleanArchitecture.Domain.Enums.Enums;
+﻿// <copyright file="PersonDto.cs" company="Ascentic">
+// Copyright (c) Ascentic. All rights reserved.
+// </copyright>
 
 namespace LibraryManagementCleanArchitecture.Application.DTO.PersonDTO
 {
+    using static LibraryManagementCleanArchitecture.Domain.Enums.Enums;
+
     public class PersonDto
     {
         public string Id { get; set; }
-        public string Name { get; set; }
-        public UserType Role { get; set; }
-        public int BooksBorrowed { get; set; }
 
+        public string Name { get; set; }
+
+        public UserType Role { get; set; }
+
+        public int BooksBorrowed { get; set; }
     }
 }

@@ -1,8 +1,11 @@
-﻿using LibraryManagementCleanArchitecture.Application.DTO.PersonDTO;
-using MediatR;
+﻿// <copyright file="GetPersonsQuery.cs" company="Ascentic">
+// Copyright (c) Ascentic. All rights reserved.
+// </copyright>
 
-namespace LibraryManagementCleanArchitecture.Application.UseCases.Persons.Queries
+namespace LibraryManagementCleanArchitecture.Application.UseCases.Persons.GetPersons
 {
-    public record GetPersonsQuery() : IRequest<List<PersonDto>>;
+    using LibraryManagementCleanArchitecture.Application.DTO.PersonDTO;
+    using MediatR;
 
+    public record GetPersonsQuery(): IRequest<Result<List<PersonDto>>>;
 }

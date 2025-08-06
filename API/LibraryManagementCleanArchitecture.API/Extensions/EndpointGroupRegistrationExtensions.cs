@@ -1,7 +1,11 @@
-﻿using System.Reflection;
+﻿// <copyright file="EndpointGroupRegistrationExtensions.cs" company="Ascentic">
+// Copyright (c) Ascentic. All rights reserved.
+// </copyright>
 
 namespace LibraryManagementCleanArchitecture.API.Extensions
 {
+    using System.Reflection;
+
     public static class EndpointGroupRegistrationExtensions
     {
         public static void RegisterAllEndpointGroups(this IEndpointRouteBuilder app)
@@ -10,13 +14,17 @@ namespace LibraryManagementCleanArchitecture.API.Extensions
                 .GetTypes()
                 .Where(t => typeof(IEndpointGroup).IsAssignableFrom(t) && !t.IsInterface && !t.IsAbstract);
 
+            using var scope = app.ServiceProvider.CreateScope();
+
             foreach (var type in endpointGroupTypes)
             {
-                if (Activator.CreateInstance(type) is IEndpointGroup group)
+                var service = scope.ServiceProvider.GetService(type) as IEndpointGroup;
+
+                if (service is not null)
                 {
-                    group.MapEndpoints(app);
+                    service.MapEndpoints(app);
                 }
             }
         }
-    } 
+    }
 }

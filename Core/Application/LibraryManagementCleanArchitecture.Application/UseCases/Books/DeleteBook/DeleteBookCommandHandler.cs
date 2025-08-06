@@ -1,13 +1,15 @@
-﻿using LibraryManagementCleanArchitecture.Application.Exceptions;
-using LibraryManagementCleanArchitecture.Application.Interfaces;
-using LibraryManagementCleanArchitecture.Domain.Entities;
-using MediatR;
+﻿// <copyright file="DeleteBookCommandHandler.cs" company="Ascentic">
+// Copyright (c) Ascentic. All rights reserved.
+// </copyright>
 
-namespace LibraryManagementCleanArchitecture.Application.UseCases.Books.Commands
+namespace LibraryManagementCleanArchitecture.Application.UseCases.Books.DeleteBook
 {
-    public class DeleteBookCommandHandler : IRequestHandler<DeleteBookCommand, string>
-    {
+    using LibraryManagementCleanArchitecture.Application.Interfaces;
+    using LibraryManagementCleanArchitecture.Domain.Entities;
+    using MediatR;
 
+    public class DeleteBookCommandHandler : IRequestHandler<DeleteBookCommand, Result<string>>
+    {
         private readonly IRepository<Book> bookRepository;
         private readonly IUnitOfWork unitOfWork;
 
@@ -17,17 +19,19 @@ namespace LibraryManagementCleanArchitecture.Application.UseCases.Books.Commands
             this.unitOfWork = unitOfWork;
         }
 
-        public async Task<string> Handle(DeleteBookCommand request, CancellationToken cancellationToken)
+        public async Task<Result<string>> Handle(DeleteBookCommand request, CancellationToken cancellationToken)
         {
-            var book = await bookRepository.GetByIdAsync(request.BookId);
+            var book = await this.bookRepository.GetByIdAsync(request.bookId);
 
             if (book == null)
-                throw new BookNotFoundException("Failed: Trying to delete a book that does not exist. Please check the book ID and try again");
+            {
+                return Result<string>.Failure("Failed: Trying to delete a book that does not exist. Please check the book ID and try again");
+            }
 
-            await bookRepository.DeleteAsync(book);
-            await unitOfWork.CompleteAsync();
+            await this.bookRepository.DeleteAsync(book);
+            await this.unitOfWork.CompleteAsync();
 
-            return book.Id;
+            return Result<string>.Success(book.Id);
         }
     }
 }

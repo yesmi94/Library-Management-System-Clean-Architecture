@@ -1,14 +1,20 @@
-﻿using static LibraryManagementCleanArchitecture.Domain.Enums.Enums;
+﻿// <copyright file="ManagementStaff.cs" company="PlaceholderCompany">
+// Copyright (c) PlaceholderCompany. All rights reserved.
+// </copyright>
 
 namespace LibraryManagementCleanArchitecture.Domain.Entities
 {
+    using static LibraryManagementCleanArchitecture.Domain.Enums.Enums;
+
     public class ManagementStaff : Person
     {
-        public ManagementStaff(string name) : base(name, UserType.ManagementStaff) { }
+        public ManagementStaff(string name)
+            : base(name, UserType.ManagementStaff)
+        {
+        }
 
         public List<Book> DisplayBooks(List<Book> books) => books;
 
         public override string ShowType() => UserType.ManagementStaff.ToString();
-
     }
 }

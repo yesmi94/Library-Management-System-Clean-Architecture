@@ -1,16 +1,16 @@
-﻿using MediatR;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using static LibraryManagementCleanArchitecture.Domain.Enums.Enums;
+﻿// <copyright file="CreatePersonCommand.cs" company="Ascentic">
+// Copyright (c) Ascentic. All rights reserved.
+// </copyright>
 
 namespace LibraryManagementCleanArchitecture.Application.UseCases.Persons.CreatePerson
 {
+    using MediatR;
+    using static LibraryManagementCleanArchitecture.Domain.Enums.Enums;
+
     public record CreatePersonCommand(
-        string Name,
-        UserType Role,
-        int BorrowedBooksNum
-        ) : IRequest<string>;
+        string name,
+        UserType role,
+        int borrowedBooksNum,
+        string username,
+        string password) : IRequest<Result<string>>;
 }

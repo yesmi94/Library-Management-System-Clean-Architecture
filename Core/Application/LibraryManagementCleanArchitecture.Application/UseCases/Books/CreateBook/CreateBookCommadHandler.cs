@@ -1,12 +1,15 @@
-﻿using LibraryManagementCleanArchitecture.Application.Interfaces;
-using LibraryManagementCleanArchitecture.Domain.Entities;
-using MediatR;
+﻿// <copyright file="CreateBookCommadHandler.cs" company="Ascentic">
+// Copyright (c) Ascentic. All rights reserved.
+// </copyright>
 
-namespace LibraryManagementCleanArchitecture.Application.UseCases.Books.Commands
+namespace LibraryManagementCleanArchitecture.Application.UseCases.Books.CreateBook
 {
-    public class CreateBookCommadHandler : IRequestHandler<CreateBookCommand, string>
-    {
+    using LibraryManagementCleanArchitecture.Application.Interfaces;
+    using LibraryManagementCleanArchitecture.Domain.Entities;
+    using MediatR;
 
+    public class CreateBookCommadHandler : IRequestHandler<CreateBookCommand, Result<string>>
+    {
         private readonly IRepository<Book> bookRepository;
         private readonly IUnitOfWork unitOfWork;
 
@@ -16,23 +19,21 @@ namespace LibraryManagementCleanArchitecture.Application.UseCases.Books.Commands
             this.unitOfWork = unitOfWork;
         }
 
-        public async Task<string> Handle(CreateBookCommand request, CancellationToken cancellationToken)
+        public async Task<Result<string>> Handle(CreateBookCommand request, CancellationToken cancellationToken)
         {
             var book = new Book
             {
-                Title = request.Title,
-                Author = request.Author,
-                Year = request.Year,
-                Category = request.BookCategory,
-                IsAvailable = true
+                Title = request.title,
+                Author = request.author,
+                Year = request.year,
+                Category = request.bookCategory,
+                IsAvailable = true,
             };
 
-            await bookRepository.AddAsync(book);
-            await unitOfWork.CompleteAsync();
+            await this.bookRepository.AddAsync(book);
+            await this.unitOfWork.CompleteAsync();
 
-            return book.Id;
-
+            return Result<string>.Success(book.Id);
         }
     }
-
 }

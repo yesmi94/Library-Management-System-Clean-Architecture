@@ -1,49 +1,60 @@
-﻿using LibraryManagementCleanArchitecture.Application.Exceptions;
-using LibraryManagementCleanArchitecture.Application.Interfaces;
-using LibraryManagementCleanArchitecture.Domain.Entities;
-using MediatR;
-using static LibraryManagementCleanArchitecture.Domain.Enums.Enums;
+﻿// <copyright file="ReturnBookCommandHandler.cs" company="Ascentic">
+// Copyright (c) Ascentic. All rights reserved.
+// </copyright>
 
-namespace LibraryManagementCleanArchitecture.Application.UseCases.Library.Commands
+namespace LibraryManagementCleanArchitecture.Application.UseCases.Library.ReturnBook
 {
-    public class ReturnBookCommandHandler : IRequestHandler<ReturnBookCommand, string>
+    using LibraryManagementCleanArchitecture.Application.Exceptions;
+    using LibraryManagementCleanArchitecture.Application.Interfaces;
+    using LibraryManagementCleanArchitecture.Domain.Entities;
+    using MediatR;
+    using static LibraryManagementCleanArchitecture.Domain.Enums.Enums;
+
+    public class ReturnBookCommandHandler : IRequestHandler<ReturnBookCommand, Result<Book>>
     {
         private readonly IRepository<Book> bookRepository;
         private readonly IRepository<Person> personRepository;
+        private readonly IRepository<Borrowing> borrowingRepository;
         private readonly IUnitOfWork unitOfWork;
-        public ReturnBookCommandHandler(IRepository<Book> bookRepository, IRepository<Person> personRepository, IUnitOfWork unitOfWork)
+
+        public ReturnBookCommandHandler(IRepository<Book> bookRepository, IRepository<Person> personRepository, IUnitOfWork unitOfWork, IRepository<Borrowing> borrowingRepository)
         {
             this.bookRepository = bookRepository;
             this.personRepository = personRepository;
+            this.borrowingRepository = borrowingRepository;
             this.unitOfWork = unitOfWork;
         }
-        public async Task<string> Handle(ReturnBookCommand request, CancellationToken cancellationToken)
+
+        public async Task<Result<Book>> Handle(ReturnBookCommand request, CancellationToken cancellationToken)
         {
-            var book = await bookRepository.GetByIdAsync(request.bookId);
-            var person = await personRepository.GetByIdAsync(request.personId);
+            var borrowing = await this.borrowingRepository.GetByIdAsync(request.borrowingId);
+            var bookId = await this.bookRepository.GetByIdAsync(borrowing.BookId);
+            var book = await this.bookRepository.GetByIdAsync(request.bookId);
+            var person = await this.personRepository.GetByIdAsync(request.personId);
 
-            if (book == null)
-                throw new BookNotFoundException($"Failed: Book with {request.bookId} does not exist. Please check the book ID an try again");
-
-            if(person == null)
+            if (borrowing == null || borrowing.IsReturned)
             {
-                throw new InvalidPersonException($"Failed: Couldn't find the person with ID - {request.personId}. Please check the ID and try again");
+                return Result<Book>.Failure("Invalid borrowing record.");
             }
 
-            if(person.Role != UserType.Member)
+            borrowing.IsReturned = true;
+
+            book = borrowing.Book;
+            book.IsAvailable = true;
+
+            if (person.Role != UserType.Member)
             {
-                throw new InvalidPersonException("Only the members are allowed to return books");
+                return Result<Book>.Failure("Only the members are allowed to return books");
             }
 
             book.IsAvailable = true;
             person.BorrowedBooksNum--;
 
-            await bookRepository.UpdateAsync(book);
-            await personRepository.UpdateAsync(person);
-            await unitOfWork.CompleteAsync();
+            await this.bookRepository.UpdateAsync(book);
+            await this.personRepository.UpdateAsync(person);
+            await this.unitOfWork.CompleteAsync();
 
-            return book.Id;
-
+            return Result<Book>.Success(book);
         }
     }
 }

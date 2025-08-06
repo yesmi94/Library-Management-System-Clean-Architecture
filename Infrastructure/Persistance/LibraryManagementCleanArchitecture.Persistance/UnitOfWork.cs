@@ -1,8 +1,12 @@
-﻿using LibraryManagementCleanArchitecture.Application.Interfaces;
-using Microsoft.EntityFrameworkCore.Storage;
+﻿// <copyright file="UnitOfWork.cs" company="PlaceholderCompany">
+// Copyright (c) PlaceholderCompany. All rights reserved.
+// </copyright>
 
 namespace LibraryManagementCleanArchitecture.Persistance
 {
+    using LibraryManagementCleanArchitecture.Application.Interfaces;
+    using Microsoft.EntityFrameworkCore.Storage;
+
     public class UnitOfWork : IUnitOfWork
     {
         private readonly DataContext context;
@@ -14,30 +18,32 @@ namespace LibraryManagementCleanArchitecture.Persistance
             this.context = context;
         }
 
-        public async Task<int> CompleteAsync() {
+        public async Task<int> CompleteAsync()
+        {
             try
             {
-                currentTransaction = await context.Database.BeginTransactionAsync();
-                var result = await context.SaveChangesAsync();
-                await currentTransaction.CommitAsync();
+                this.currentTransaction = await this.context.Database.BeginTransactionAsync();
+                var result = await this.context.SaveChangesAsync();
+                await this.currentTransaction.CommitAsync();
                 return result;
             }
             catch (Exception)
             {
-                if(currentTransaction == null)
+                if (this.currentTransaction == null)
                 {
-                    await currentTransaction.RollbackAsync();
+                    await this.currentTransaction.RollbackAsync();
                 }
+
                 throw;
             }
-            finally {
-
-                if (currentTransaction != null) { 
-                    await currentTransaction.DisposeAsync();    
-                    currentTransaction = null;
+            finally
+            {
+                if (this.currentTransaction != null)
+                {
+                    await this.currentTransaction.DisposeAsync();
+                    this.currentTransaction = null;
                 }
             }
         }
     }
-
 }
